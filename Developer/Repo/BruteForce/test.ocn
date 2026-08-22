@@ -1,0 +1,4 @@
+simulator('spectre)
+
+design("bforceLib" "bforceCell1" "schematic")
+

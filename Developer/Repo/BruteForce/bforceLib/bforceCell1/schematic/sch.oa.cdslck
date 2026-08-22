@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      aditya23043
+HostName                       edatools-server2.iiitd.edu.in
+ProcessIdentifier              64675
+ProcessCreationTime_UTC        1775637033
+ProcessCreationTime_Readable   Wed Apr  8 14:00:33 2026 IST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/aditya23043/BruteForce/bforceLib/bforceCell1/schematic/sch.oa.cdslck
+TimeEditLocked                 Fri Aug 21 12:21:30 2026 IST

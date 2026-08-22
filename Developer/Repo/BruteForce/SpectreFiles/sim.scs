@@ -1,0 +1,10 @@
+simulator lang=spectre
+global 0
+include "/cadence/FOUNDRY/analog/45nm/models/spectre/gpdk045.scs" section=ss
+
+simulatorOptions options psfversion="1.4.0" reltol=1e-3 vabstol=1e-6 iabstol=1e-12 temp=125.0 scalem=1.0 scale=1.0 dc_pivot_check=yes multithread=on forcemt=yes nthreads=4 rforce=1 maxnotes=0 maxwarns=0 digits=5 pivrel=1e-3 audit=no inventory=no narrate=no diagnose=no title="" gmin_check=no
+
+simulatorOptions options 
+
+saveOptions options save=none
+save A sum
