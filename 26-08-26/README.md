@@ -526,3 +526,10 @@ ABC: ** cmd error: aborting 'source <abc-temp-dir>/abc.script'
 ABC: Error: Current library is not available.
 ERROR: Can't open ABC output file `/tmp/yosys-abc-fvpLl3/output.blif'.
 ```
+
+# Wed Aug 26 09:25:33 PM IST 2026
+
+- Could not get yosys to map using only a NAND gate
+- Removed all other NAND2 gates so then the tool used NAND3
+- Removed all NAND gates altogether and now it does not use NAND anymore;
+  moved to other gates to achieve the logic

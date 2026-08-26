@@ -1,29 +1,17 @@
-# read_verilog full_adder.v
+set LIB NangateOpenCellLibrary_typical_nand_only_x3.lib
 
-# hierarchy -top full_adder
-# proc; opt; techmap; opt
+yosys read_verilog full_adder.v
 
-# abc -g NAND
+yosys hierarchy -check -top full_adder
 
-# hilomap -hicell NAND2_X3 Y -locell NAND2_X3 Y
-# abc -liberty NangateOpenCellLibrary_typical_only_NAND2_X3.lib -g NAND
+yosys proc
 
-# write_verilog -noattr fa_nand_mapped.v
+yosys techmap
 
-read_verilog full_adder.v
+yosys dfflibmap -liberty $LIB
 
-# Lower logic to basic internal primitives
-hierarchy -top full_adder
-proc; opt; techmap; opt
+yosys abc -liberty $LIB
 
-# Force ABC to synthesize logic strictly into 2-input NAND primitives ($_NAND_$)
-abc -g NAND
+yosys clean
 
-# Map internal generic $_NAND_$ primitives directly to NAND2_X3 instantiations
-techmap -map nand_map.v
-
-# Remove unused wires and format instance names cleanly
-clean
-rename -enumerate -pattern cell_%d t:NAND2_X3
-
-write_verilog -noattr fa_nand_mapped.v
+yosys write_verilog -noattr fa_nand2x3.v
