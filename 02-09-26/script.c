@@ -4,12 +4,10 @@
 #include <stdlib.h>
 
 void modify_yosys_tcl(char* libs, char* ckt, char* topmodule);
-void run_yosys();
+void run_yosys(char* topname, char* lib);
 
 int main(void)
 {
-	FILE* yosys_cmd = popen("yosys -s yosys.tcl 2>&1", "r");
-
 	DIR* circuits_dir = opendir("circuits");
 	struct dirent *ckt_entry;
 	if(circuits_dir == NULL)
@@ -32,6 +30,7 @@ int main(void)
 
 		if(strcmp(libs, ".") == 0 || strcmp(libs, "..") == 0) continue;
 
+		rewinddir(circuits_dir);
 		while((ckt_entry = readdir(circuits_dir)) != NULL)
 		{
 			char* ckt = ckt_entry->d_name;
@@ -43,17 +42,11 @@ int main(void)
 
 			modify_yosys_tcl(libs, ckt, ckt_top_module);
 
-			free(ckt_top_module);
+			run_yosys(ckt_top_module, libs);
 
-			run_yosys();
+			free(ckt_top_module);
 		}
 	}
-
-	char buf[1024];
-	fread(buf, sizeof(char), 1024, yosys_cmd);
-	/* printf("%s\n", buf); */
-
-	pclose(yosys_cmd);
 
 	return 0;
 }
@@ -74,9 +67,9 @@ void modify_yosys_tcl(char* libs, char* ckt, char* topmodule)
 		{
 			fprintf(temp_file, "hierarchy -check -top %s\n", topmodule);
 		}
-		else if(strstr(buf, "difflibmap -liberty") != NULL)
+		else if(strstr(buf, "dfflibmap -liberty") != NULL)
 		{
-			fprintf(temp_file, "difflibmap -liberty libs/%s\n", libs);
+			fprintf(temp_file, "dfflibmap -liberty libs/%s\n", libs);
 		}
 		else if(strstr(buf, "abc -liberty") != NULL)
 		{
@@ -84,7 +77,7 @@ void modify_yosys_tcl(char* libs, char* ckt, char* topmodule)
 		}
 		else if(strstr(buf, "write_verilog") != NULL)
 		{
-			fprintf(temp_file, "write_verilog -noattr output/mapped_%s\n", ckt);
+			fprintf(temp_file, "write_verilog -noattr output/mapped_%s_%s\n", libs, ckt);
 		}
 		else
 		{
@@ -93,9 +86,34 @@ void modify_yosys_tcl(char* libs, char* ckt, char* topmodule)
 	}
 
 	fclose(yosys_tcl_file);
+	fclose(temp_file);
+
+	if(rename(".tmp", "yosys.tcl") != 0)
+	{
+		perror("Rename from .tmp -> yosys.tcl failed");
+		return;
+	}
 }
 
-void run_yosys()
+void run_yosys(char* topname, char* lib)
 {
+	FILE* yosys_cmd = popen("yosys -s yosys.tcl 2>&1", "r");
+	char log_file_name[128];
+	sprintf(log_file_name, "log/%s_%s", topname, lib);
+	FILE* log_file = fopen(log_file_name, "w");
 
+	int bufsz = 1024;
+	char buf[bufsz];
+	char* p;
+	while(fgets(buf, bufsz, yosys_cmd) != NULL)
+	{
+		if((p = strstr(buf, "Area")) != NULL)
+		{
+			printf("Circuit: %s | Library: %s\n%s\n", topname, lib, p);
+		}
+		fputs(buf, log_file);
+	}
+
+	pclose(yosys_cmd);
+	fclose(log_file);
 }

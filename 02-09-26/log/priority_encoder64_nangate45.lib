@@ -1,0 +1,445 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+
+-- Executing script file `yosys.tcl' --
+
+1. Executing Verilog-2005 frontend: circuits/priority_encoder64.v
+Parsing Verilog input from `circuits/priority_encoder64.v' to AST representation.
+Generating RTLIL representation for module `\priority_encoder64'.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:11.9-11.18.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Warning: wire '\index' is assigned in a block at circuits/priority_encoder64.v:16.17-16.26.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \priority_encoder64
+
+2.2. Analyzing design hierarchy..
+Top module:  \priority_encoder64
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 64 switch rules as full_case in process $proc$circuits/priority_encoder64.v:10$2 in module priority_encoder64.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~64 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\priority_encoder64.$proc$circuits/priority_encoder64.v:10$2'.
+     1/128: $64\found[0:0]
+     2/128: $64\index[5:0]
+     3/128: $63\found[0:0]
+     4/128: $63\index[5:0]
+     5/128: $62\found[0:0]
+     6/128: $62\index[5:0]
+     7/128: $61\found[0:0]
+     8/128: $61\index[5:0]
+     9/128: $60\found[0:0]
+    10/128: $60\index[5:0]
+    11/128: $59\found[0:0]
+    12/128: $59\index[5:0]
+    13/128: $58\found[0:0]
+    14/128: $58\index[5:0]
+    15/128: $57\found[0:0]
+    16/128: $57\index[5:0]
+    17/128: $56\found[0:0]
+    18/128: $56\index[5:0]
+    19/128: $55\found[0:0]
+    20/128: $55\index[5:0]
+    21/128: $54\found[0:0]
+    22/128: $54\index[5:0]
+    23/128: $53\found[0:0]
+    24/128: $53\index[5:0]
+    25/128: $52\found[0:0]
+    26/128: $52\index[5:0]
+    27/128: $51\found[0:0]
+    28/128: $51\index[5:0]
+    29/128: $50\found[0:0]
+    30/128: $50\index[5:0]
+    31/128: $49\found[0:0]
+    32/128: $49\index[5:0]
+    33/128: $48\found[0:0]
+    34/128: $48\index[5:0]
+    35/128: $47\found[0:0]
+    36/128: $47\index[5:0]
+    37/128: $46\found[0:0]
+    38/128: $46\index[5:0]
+    39/128: $45\found[0:0]
+    40/128: $45\index[5:0]
+    41/128: $44\found[0:0]
+    42/128: $44\index[5:0]
+    43/128: $43\found[0:0]
+    44/128: $43\index[5:0]
+    45/128: $42\found[0:0]
+    46/128: $42\index[5:0]
+    47/128: $41\found[0:0]
+    48/128: $41\index[5:0]
+    49/128: $40\found[0:0]
+    50/128: $40\index[5:0]
+    51/128: $39\found[0:0]
+    52/128: $39\index[5:0]
+    53/128: $38\found[0:0]
+    54/128: $38\index[5:0]
+    55/128: $37\found[0:0]
+    56/128: $37\index[5:0]
+    57/128: $36\found[0:0]
+    58/128: $36\index[5:0]
+    59/128: $35\found[0:0]
+    60/128: $35\index[5:0]
+    61/128: $34\found[0:0]
+    62/128: $34\index[5:0]
+    63/128: $33\found[0:0]
+    64/128: $33\index[5:0]
+    65/128: $32\found[0:0]
+    66/128: $32\index[5:0]
+    67/128: $31\found[0:0]
+    68/128: $31\index[5:0]
+    69/128: $30\found[0:0]
+    70/128: $30\index[5:0]
+    71/128: $29\found[0:0]
+    72/128: $29\index[5:0]
+    73/128: $28\found[0:0]
+    74/128: $28\index[5:0]
+    75/128: $27\found[0:0]
+    76/128: $27\index[5:0]
+    77/128: $26\found[0:0]
+    78/128: $26\index[5:0]
+    79/128: $25\found[0:0]
+    80/128: $25\index[5:0]
+    81/128: $24\found[0:0]
+    82/128: $24\index[5:0]
+    83/128: $23\found[0:0]
+    84/128: $23\index[5:0]
+    85/128: $22\found[0:0]
+    86/128: $22\index[5:0]
+    87/128: $21\found[0:0]
+    88/128: $21\index[5:0]
+    89/128: $20\found[0:0]
+    90/128: $20\index[5:0]
+    91/128: $19\found[0:0]
+    92/128: $19\index[5:0]
+    93/128: $18\found[0:0]
+    94/128: $18\index[5:0]
+    95/128: $17\found[0:0]
+    96/128: $17\index[5:0]
+    97/128: $16\found[0:0]
+    98/128: $16\index[5:0]
+    99/128: $15\found[0:0]
+   100/128: $15\index[5:0]
+   101/128: $14\found[0:0]
+   102/128: $14\index[5:0]
+   103/128: $13\found[0:0]
+   104/128: $13\index[5:0]
+   105/128: $12\found[0:0]
+   106/128: $12\index[5:0]
+   107/128: $11\found[0:0]
+   108/128: $11\index[5:0]
+   109/128: $10\found[0:0]
+   110/128: $10\index[5:0]
+   111/128: $9\found[0:0]
+   112/128: $9\index[5:0]
+   113/128: $8\found[0:0]
+   114/128: $8\index[5:0]
+   115/128: $7\found[0:0]
+   116/128: $7\index[5:0]
+   117/128: $6\found[0:0]
+   118/128: $6\index[5:0]
+   119/128: $5\found[0:0]
+   120/128: $5\index[5:0]
+   121/128: $4\found[0:0]
+   122/128: $4\index[5:0]
+   123/128: $3\found[0:0]
+   124/128: $3\index[5:0]
+   125/128: $2\found[0:0]
+   126/128: $2\index[5:0]
+   127/128: $1\found[0:0]
+   128/128: $1\index[5:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\priority_encoder64.\i' from process `\priority_encoder64.$proc$circuits/priority_encoder64.v:10$2'.
+No latch inferred for signal `\priority_encoder64.\index' from process `\priority_encoder64.$proc$circuits/priority_encoder64.v:10$2'.
+No latch inferred for signal `\priority_encoder64.\found' from process `\priority_encoder64.$proc$circuits/priority_encoder64.v:10$2'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 64 empty switches in `\priority_encoder64.$proc$circuits/priority_encoder64.v:10$2'.
+Removing empty process `priority_encoder64.$proc$circuits/priority_encoder64.v:10$2'.
+Cleaned up 64 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module priority_encoder64.
+<suppressed ~2 debug messages>
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~332 debug messages>
+
+6. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+6.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\priority_encoder64':
+
+7. Executing ABC pass (technology mapping using ABC).
+
+7.1. Extracting gate netlist of module `\priority_encoder64' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl (1 files)
+
+7.1.1. Executed ABC.
+Extracted 637 gates and 703 wires to a netlist network with 64 inputs and 7 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FA_X1").
+ABC: + read_constr -v /Users/adi/Developer/Repo/BTP-Sem7/02-09-26/constraints.sdc 
+ABC: Unrecognized token "#".
+ABC: Unrecognized token "create_clock".
+ABC: Unrecognized token "set_input_delay".
+ABC: Unrecognized token "set_output_delay".
+ABC: Unrecognized token "#".
+ABC: Setting output load to be 20.000000.
+ABC: Unrecognized token "#".
+ABC: Setting driving cell to be "-lib_cell".
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + upsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + dnsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: WireLoad = "none"  Gates =    176 ( 17.6 %)   Cap =  4.3 ff (  6.7 %)   Area =      216.79 ( 86.9 %)   Delay =   775.44 ps  ( 32.4 %)               
+ABC: Path  0 --       8 : 0    2 pi       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   5.3 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      78 : 4    3 OR4_X4   A =   3.46  Df = 104.2  -82.0 ps  S =  16.1 ps  Cin =  3.3 ff  Cout =   6.9 ff  Cmax = 241.7 ff  G =  207  
+ABC: Path  2 --      79 : 4    2 OR4_X4   A =   3.46  Df = 214.0 -164.0 ps  S =  16.2 ps  Cin =  3.3 ff  Cout =   7.7 ff  Cmax = 241.7 ff  G =  225  
+ABC: Path  3 --      82 : 4    4 NOR4_X4  A =   4.79  Df = 304.5 -242.0 ps  S =  52.7 ps  Cin =  5.8 ff  Cout =  10.7 ff  Cmax =  41.5 ff  G =  179  
+ABC: Path  4 --      84 : 4    3 NAND4_X4 A =   4.79  Df = 345.1 -258.1 ps  S =  20.4 ps  Cin =  5.7 ff  Cout =   9.2 ff  Cmax = 222.8 ff  G =  158  
+ABC: Path  5 --      85 : 4    4 NOR4_X4  A =   4.79  Df = 440.4 -337.9 ps  S =  51.5 ps  Cin =  5.8 ff  Cout =  10.2 ff  Cmax =  41.5 ff  G =  169  
+ABC: Path  6 --      87 : 4    4 NAND4_X4 A =   4.79  Df = 481.9 -354.5 ps  S =  21.0 ps  Cin =  5.7 ff  Cout =  11.2 ff  Cmax = 222.8 ff  G =  184  
+ABC: Path  7 --      93 : 4    3 NOR4_X4  A =   4.79  Df = 547.5 -406.6 ps  S =  39.6 ps  Cin =  5.8 ff  Cout =   5.3 ff  Cmax =  41.5 ff  G =   86  
+ABC: Path  8 --      94 : 1   10 BUF_X4   A =   1.86  Df = 585.6 -413.2 ps  S =  16.7 ps  Cin =  3.2 ff  Cout =  23.6 ff  Cmax = 242.3 ff  G =  723  
+ABC: Path  9 --     108 : 3    4 NAND3_X4 A =   3.46  Df = 609.9 -417.5 ps  S =  23.7 ps  Cin =  6.6 ff  Cout =  12.8 ff  Cmax = 233.2 ff  G =  186  
+ABC: Path 10 --     157 : 4    2 NOR4_X4  A =   4.79  Df = 682.5 -477.9 ps  S =  34.8 ps  Cin =  5.8 ff  Cout =   3.3 ff  Cmax =  41.5 ff  G =   53  
+ABC: Path 11 --     165 : 2    1 NAND2_X1 A =   0.80  Df = 699.5 -480.4 ps  S =  12.2 ps  Cin =  1.6 ff  Cout =   1.6 ff  Cmax =  59.4 ff  G =   99  
+ABC: Path 12 --     183 : 4    1 NAND4_X1 A =   1.33  Df = 720.7 -352.5 ps  S =  17.5 ps  Cin =  1.6 ff  Cout =   1.7 ff  Cmax =  56.0 ff  G =  105  
+ABC: Path 13 --     184 : 2    1 OR2_X2   A =   1.33  Df = 746.8 -328.5 ps  S =   8.6 ps  Cin =  1.6 ff  Cout =   3.4 ff  Cmax = 121.2 ff  G =  198  
+ABC: Path 14 --     185 : 1    1 BUF_X4   A =   1.86  Df = 775.4 -327.1 ps  S =  14.4 ps  Cin =  3.2 ff  Cout =  20.0 ff  Cmax = 242.3 ff  G =  624  
+ABC: Start-point = pi7 (\in [57]).  End-point = po2 ($procmux$136_Y [2]).
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:        5
+ABC RESULTS:           AND3_X1 cells:        5
+ABC RESULTS:           AND4_X1 cells:        3
+ABC RESULTS:         AOI211_X1 cells:        6
+ABC RESULTS:          AOI21_X1 cells:        8
+ABC RESULTS:         AOI221_X1 cells:        2
+ABC RESULTS:          AOI22_X1 cells:        1
+ABC RESULTS:            BUF_X4 cells:        2
+ABC RESULTS:            INV_X1 cells:       29
+ABC RESULTS:          NAND2_X1 cells:       15
+ABC RESULTS:          NAND3_X1 cells:       12
+ABC RESULTS:          NAND3_X2 cells:        2
+ABC RESULTS:          NAND3_X4 cells:        1
+ABC RESULTS:          NAND4_X1 cells:        8
+ABC RESULTS:          NAND4_X4 cells:        3
+ABC RESULTS:           NOR2_X1 cells:       27
+ABC RESULTS:           NOR2_X2 cells:        1
+ABC RESULTS:           NOR3_X1 cells:        8
+ABC RESULTS:           NOR3_X2 cells:        1
+ABC RESULTS:           NOR4_X1 cells:        8
+ABC RESULTS:           NOR4_X2 cells:        1
+ABC RESULTS:           NOR4_X4 cells:        4
+ABC RESULTS:         OAI211_X1 cells:        4
+ABC RESULTS:         OAI211_X2 cells:        1
+ABC RESULTS:          OAI21_X1 cells:        9
+ABC RESULTS:          OAI21_X2 cells:        1
+ABC RESULTS:         OAI221_X1 cells:        1
+ABC RESULTS:            OR2_X1 cells:        2
+ABC RESULTS:            OR2_X2 cells:        1
+ABC RESULTS:            OR3_X1 cells:        1
+ABC RESULTS:            OR4_X1 cells:        1
+ABC RESULTS:            OR4_X4 cells:        3
+ABC RESULTS:        internal signals:      632
+ABC RESULTS:           input signals:       64
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 594 unused wires.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\priority_encoder64'.
+
+Warnings: 2 unique messages, 65 total
+End of script. Logfile hash: c47f51e6a5, time: 0.12s, user: 0.03s, system: 0.00s, MEM: 32.02 MB peak
+Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+Time spent: 75% 1x abc (0 sec), 13% 1x dfflibmap (0 sec), ...

@@ -1,6 +1,6 @@
-read_verilog circuits/alu32.v
+read_verilog circuits/popcount64.v
 
-hierarchy -check -top alu32
+hierarchy -check -top popcount64
 
 proc
 
@@ -8,10 +8,10 @@ flatten
 
 techmap
 
-dfflibmap -liberty libs/modified.lib
+dfflibmap -liberty libs/nangate45.lib
 
-abc -liberty libs/modified.lib -constr constraints.sdc
+abc -liberty libs/nangate45.lib -constr constraints.sdc
 
 clean
 
-write_verilog -noattr output_fa.v
+write_verilog -noattr output/mapped_nangate45.lib_popcount64.v

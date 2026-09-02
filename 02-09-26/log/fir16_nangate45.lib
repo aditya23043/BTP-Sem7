@@ -1,0 +1,394 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+
+-- Executing script file `yosys.tcl' --
+
+1. Executing Verilog-2005 frontend: circuits/fir16.v
+Parsing Verilog input from `circuits/fir16.v' to AST representation.
+Generating RTLIL representation for module `\fir16'.
+Warning: Replacing memory \samples with list of registers. See circuits/fir16.v:17
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \fir16
+
+2.2. Analyzing design hierarchy..
+Top module:  \fir16
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$circuits/fir16.v:14$4 in module fir16.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 16 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\fir16.$proc$circuits/fir16.v:27$5'.
+Creating decoders for process `\fir16.$proc$circuits/fir16.v:14$4'.
+     1/17: $1\i[31:0]
+     2/17: $0\samples[15][15:0]
+     3/17: $0\samples[14][15:0]
+     4/17: $0\samples[13][15:0]
+     5/17: $0\samples[12][15:0]
+     6/17: $0\samples[11][15:0]
+     7/17: $0\samples[10][15:0]
+     8/17: $0\samples[9][15:0]
+     9/17: $0\samples[8][15:0]
+    10/17: $0\samples[7][15:0]
+    11/17: $0\samples[6][15:0]
+    12/17: $0\samples[5][15:0]
+    13/17: $0\samples[4][15:0]
+    14/17: $0\samples[3][15:0]
+    15/17: $0\samples[2][15:0]
+    16/17: $0\samples[1][15:0]
+    17/17: $0\samples[0][15:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\fir16.\i' from process `\fir16.$proc$circuits/fir16.v:27$5'.
+No latch inferred for signal `\fir16.\acc' from process `\fir16.$proc$circuits/fir16.v:27$5'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\fir16.\i' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$104' with positive edge clock.
+Creating register for signal `\fir16.\samples[0]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$105' with positive edge clock.
+Creating register for signal `\fir16.\samples[1]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$106' with positive edge clock.
+Creating register for signal `\fir16.\samples[2]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$107' with positive edge clock.
+Creating register for signal `\fir16.\samples[3]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$108' with positive edge clock.
+Creating register for signal `\fir16.\samples[4]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$109' with positive edge clock.
+Creating register for signal `\fir16.\samples[5]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$110' with positive edge clock.
+Creating register for signal `\fir16.\samples[6]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$111' with positive edge clock.
+Creating register for signal `\fir16.\samples[7]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$112' with positive edge clock.
+Creating register for signal `\fir16.\samples[8]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$113' with positive edge clock.
+Creating register for signal `\fir16.\samples[9]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$114' with positive edge clock.
+Creating register for signal `\fir16.\samples[10]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$115' with positive edge clock.
+Creating register for signal `\fir16.\samples[11]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$116' with positive edge clock.
+Creating register for signal `\fir16.\samples[12]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$117' with positive edge clock.
+Creating register for signal `\fir16.\samples[13]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$118' with positive edge clock.
+Creating register for signal `\fir16.\samples[14]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$119' with positive edge clock.
+Creating register for signal `\fir16.\samples[15]' using process `\fir16.$proc$circuits/fir16.v:14$4'.
+  created $dff cell `$procdff$120' with positive edge clock.
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `fir16.$proc$circuits/fir16.v:27$5'.
+Found and cleaned up 1 empty switch in `\fir16.$proc$circuits/fir16.v:14$4'.
+Removing empty process `fir16.$proc$circuits/fir16.v:14$4'.
+Cleaned up 1 empty switch.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module fir16.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+Running "alumacc" on wrapper $extern:wrap:$mul:Y_WIDTH=48:B_WIDTH=16:A_WIDTH=16:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$mul:Y_WIDTH=48:B_WIDTH=16:A_WIDTH=16:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$mul:Y_WIDTH=48:B_WIDTH=16:A_WIDTH=16:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=48:B_WIDTH=48:A_WIDTH=48:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=48:B_WIDTH=48:A_WIDTH=48:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=48:B_WIDTH=48:A_WIDTH=48:B_SIGNED=1:A_SIGNED=1:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \samples[0] * $memrd$\coeff$circuits/fir16.v:31$6_DATA (16x16 bits, signed)
+Using template $paramod$45bda7aa09912e054059645cb80fb66f0c7f8a2d\_90_alu for cells of type $alu.
+  add \samples[1] * $memrd$\coeff$circuits/fir16.v:31$9_DATA (16x16 bits, signed)
+  add \samples[2] * $memrd$\coeff$circuits/fir16.v:31$12_DATA (16x16 bits, signed)
+  add \samples[3] * $memrd$\coeff$circuits/fir16.v:31$15_DATA (16x16 bits, signed)
+  add \samples[4] * $memrd$\coeff$circuits/fir16.v:31$18_DATA (16x16 bits, signed)
+  add \samples[5] * $memrd$\coeff$circuits/fir16.v:31$21_DATA (16x16 bits, signed)
+  add \samples[6] * $memrd$\coeff$circuits/fir16.v:31$24_DATA (16x16 bits, signed)
+  add \samples[7] * $memrd$\coeff$circuits/fir16.v:31$27_DATA (16x16 bits, signed)
+  add \samples[8] * $memrd$\coeff$circuits/fir16.v:31$30_DATA (16x16 bits, signed)
+  add \samples[9] * $memrd$\coeff$circuits/fir16.v:31$33_DATA (16x16 bits, signed)
+  add \samples[10] * $memrd$\coeff$circuits/fir16.v:31$36_DATA (16x16 bits, signed)
+  add \samples[11] * $memrd$\coeff$circuits/fir16.v:31$39_DATA (16x16 bits, signed)
+  add \samples[12] * $memrd$\coeff$circuits/fir16.v:31$42_DATA (16x16 bits, signed)
+  add \samples[13] * $memrd$\coeff$circuits/fir16.v:31$45_DATA (16x16 bits, signed)
+  add \samples[14] * $memrd$\coeff$circuits/fir16.v:31$48_DATA (16x16 bits, signed)
+  add \samples[15] * $memrd$\coeff$circuits/fir16.v:31$51_DATA (16x16 bits, signed)
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110000 for cells of type $fa.
+Using template $paramod$88aad6f8473fb7e4e5fbfb8335ddebad03429eaa\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $or.
+No more expansions possible.
+<suppressed ~9525 debug messages>
+
+6. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+6.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\fir16':
+  mapped 288 $_DFF_P_ cells to \DFF_X1 cells.
+
+7. Executing ABC pass (technology mapping using ABC).
+
+7.1. Extracting gate netlist of module `\fir16' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl (1 files)
+
+7.1.1. Executed ABC.
+Extracted 90000 gates and 90787 wires to a netlist network with 786 inputs and 288 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FA_X1").
+ABC: + read_constr -v /Users/adi/Developer/Repo/BTP-Sem7/02-09-26/constraints.sdc 
+ABC: Unrecognized token "#".
+ABC: Unrecognized token "create_clock".
+ABC: Unrecognized token "set_input_delay".
+ABC: Unrecognized token "set_output_delay".
+ABC: Unrecognized token "#".
+ABC: Setting output load to be 20.000000.
+ABC: Unrecognized token "#".
+ABC: Setting driving cell to be "-lib_cell".
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + upsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + dnsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: WireLoad = "none"  Gates =  31357 (  8.3 %)   Cap =  3.8 ff (  0.3 %)   Area =    34815.94 ( 99.1 %)   Delay =  3265.60 ps  (  3.5 %)               
+ABC: Path  0 --      40 : 0   20 pi        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  42.8 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --    2108 : 4    4 AND4_X4   A =   3.46  Df =  49.8  -18.8 ps  S =  11.1 ps  Cin =  3.3 ff  Cout =   6.0 ff  Cmax = 241.1 ff  G =  169  
+ABC: Path  2 --    2112 : 2    2 OR2_X2    A =   1.33  Df = 108.5   -8.8 ps  S =   9.7 ps  Cin =  1.6 ff  Cout =   5.2 ff  Cmax = 121.2 ff  G =  321  
+ABC: Path  3 --    2117 : 2    2 XOR2_X2   A =   2.39  Df = 161.8   -3.6 ps  S =  28.5 ps  Cin =  4.4 ff  Cout =   6.1 ff  Cmax =  50.5 ff  G =  130  
+ABC: Path  4 --    2157 : 2    2 XNOR2_X1  A =   1.60  Df = 209.9   -4.5 ps  S =  26.1 ps  Cin =  2.3 ff  Cout =   3.3 ff  Cmax =  26.0 ff  G =  142  
+ABC: Path  5 --    2169 : 2    2 XOR2_X1   A =   1.60  Df = 272.2   -4.5 ps  S =  34.0 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  178  
+ABC: Path  6 --    2170 : 3    2 AND3_X2   A =   1.60  Df = 318.3   -7.5 ps  S =  13.2 ps  Cin =  1.6 ff  Cout =   6.0 ff  Cmax = 120.5 ff  G =  367  
+ABC: Path  7 --    2175 : 2    2 XOR2_X2   A =   2.39  Df = 373.7   -1.9 ps  S =  28.5 ps  Cin =  4.4 ff  Cout =   6.1 ff  Cmax =  50.5 ff  G =  138  
+ABC: Path  8 --    2208 : 2    2 XOR2_X2   A =   2.39  Df = 432.2   -0.9 ps  S =  28.8 ps  Cin =  4.4 ff  Cout =   6.0 ff  Cmax =  50.5 ff  G =  137  
+ABC: Path  9 --    2209 : 2    2 XOR2_X2   A =   2.39  Df = 492.0   -3.7 ps  S =  28.3 ps  Cin =  4.4 ff  Cout =   5.8 ff  Cmax =  50.5 ff  G =  127  
+ABC: Path 10 --    2238 : 2    2 XNOR2_X2  A =   2.66  Df = 537.4   -4.0 ps  S =  24.8 ps  Cin =  4.3 ff  Cout =   6.1 ff  Cmax =  52.0 ff  G =  141  
+ABC: Path 11 --    2309 : 2    2 XOR2_X2   A =   2.39  Df = 598.0   -7.9 ps  S =  28.6 ps  Cin =  4.4 ff  Cout =   6.1 ff  Cmax =  50.5 ff  G =  130  
+ABC: Path 12 --    3643 : 2    2 XNOR2_X1  A =   1.60  Df = 654.0   -6.9 ps  S =  38.8 ps  Cin =  2.3 ff  Cout =   6.0 ff  Cmax =  26.0 ff  G =  251  
+ABC: Path 13 --    3695 : 2    2 XOR2_X2   A =   2.39  Df = 720.1   -9.4 ps  S =  33.7 ps  Cin =  4.4 ff  Cout =   8.3 ff  Cmax =  50.5 ff  G =  179  
+ABC: Path 14 --    5075 : 2    2 XNOR2_X2  A =   2.66  Df = 769.0  -19.2 ps  S =  20.2 ps  Cin =  4.3 ff  Cout =   3.9 ff  Cmax =  52.0 ff  G =   88  
+ABC: Path 15 --    5129 : 2    2 XOR2_X1   A =   1.60  Df = 827.9   -6.8 ps  S =  42.0 ps  Cin =  2.3 ff  Cout =   6.1 ff  Cmax =  25.3 ff  G =  247  
+ABC: Path 16 --    6502 : 2    2 XNOR2_X1  A =   1.60  Df = 880.7   -5.4 ps  S =  29.1 ps  Cin =  2.3 ff  Cout =   3.9 ff  Cmax =  26.0 ff  G =  162  
+ABC: Path 17 --    6560 : 2    2 XOR2_X1   A =   1.60  Df = 938.9   -0.4 ps  S =  33.5 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  174  
+ABC: Path 18 --    7933 : 2    2 XNOR2_X1  A =   1.60  Df = 993.7   -8.3 ps  S =  29.1 ps  Cin =  2.3 ff  Cout =   3.9 ff  Cmax =  26.0 ff  G =  162  
+ABC: Path 19 --    7992 : 2    2 XOR2_X1   A =   1.60  Df =1050.8   -2.7 ps  S =  33.1 ps  Cin =  2.3 ff  Cout =   4.0 ff  Cmax =  25.3 ff  G =  171  
+ABC: Path 20 --    9362 : 2    2 XOR2_X1   A =   1.60  Df =1110.4   -4.3 ps  S =  29.3 ps  Cin =  2.3 ff  Cout =   3.2 ff  Cmax =  25.3 ff  G =  135  
+ABC: Path 21 --    9426 : 2    2 XOR2_X1   A =   1.60  Df =1169.8   -4.0 ps  S =  34.0 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  174  
+ABC: Path 22 --   10805 : 2    4 XNOR2_X1  A =   1.60  Df =1230.2   -6.2 ps  S =  40.7 ps  Cin =  2.3 ff  Cout =   6.5 ff  Cmax =  26.0 ff  G =  267  
+ABC: Path 23 --   10857 : 2    2 XOR2_X1   A =   1.60  Df =1289.6   -0.7 ps  S =  35.1 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  174  
+ABC: Path 24 --   12241 : 2    4 XNOR2_X1  A =   1.60  Df =1350.5   -3.3 ps  S =  40.7 ps  Cin =  2.3 ff  Cout =   6.5 ff  Cmax =  26.0 ff  G =  267  
+ABC: Path 25 --   12298 : 2    2 XOR2_X1   A =   1.60  Df =1412.8   -3.5 ps  S =  35.1 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  174  
+ABC: Path 26 --   14305 : 2    4 XNOR2_X1  A =   1.60  Df =1473.8   -6.0 ps  S =  40.7 ps  Cin =  2.3 ff  Cout =   6.5 ff  Cmax =  26.0 ff  G =  267  
+ABC: Path 27 --   14359 : 2    2 XOR2_X1   A =   1.60  Df =1544.8   -8.7 ps  S =  44.6 ps  Cin =  2.3 ff  Cout =   6.5 ff  Cmax =  25.3 ff  G =  268  
+ABC: Path 28 --   16565 : 2    4 XNOR2_X2  A =   2.66  Df =1601.2  -22.0 ps  S =  25.8 ps  Cin =  4.3 ff  Cout =   6.5 ff  Cmax =  52.0 ff  G =  146  
+ABC: Path 29 --   16615 : 2    2 XOR2_X1   A =   1.60  Df =1659.0  -16.6 ps  S =  35.1 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  174  
+ABC: Path 30 --   18936 : 2    4 XNOR2_X1  A =   1.60  Df =1717.3  -13.9 ps  S =  40.7 ps  Cin =  2.3 ff  Cout =   6.5 ff  Cmax =  26.0 ff  G =  267  
+ABC: Path 31 --   18993 : 2    2 XOR2_X1   A =   1.60  Df =1782.6  -20.2 ps  S =  34.9 ps  Cin =  2.3 ff  Cout =   4.2 ff  Cmax =  25.3 ff  G =  176  
+ABC: Path 32 --   18994 : 5    2 AOI221_X1 A =   1.60  Df =1855.0  -39.4 ps  S =  53.4 ps  Cin =  1.6 ff  Cout =   3.3 ff  Cmax =  13.8 ff  G =  207  
+ABC: Path 33 --   21287 : 2    2 OR2_X2    A =   1.33  Df =1890.1  -22.7 ps  S =   9.3 ps  Cin =  1.6 ff  Cout =   4.1 ff  Cmax = 121.2 ff  G =  250  
+ABC: Path 34 --   21288 : 3    2 OAI21_X1  A =   1.06  Df =1910.2   -0.2 ps  S =  28.5 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  26.1 ff  G =  236  
+ABC: Path 35 --   21290 : 3    2 AOI21_X1  A =   1.06  Df =1950.6  -15.9 ps  S =  33.0 ps  Cin =  1.6 ff  Cout =   4.1 ff  Cmax =  25.3 ff  G =  259  
+ABC: Path 36 --   21291 : 3    2 OAI21_X1  A =   1.06  Df =1987.3   -5.7 ps  S =  35.4 ps  Cin =  1.6 ff  Cout =   5.4 ff  Cmax =  26.1 ff  G =  324  
+ABC: Path 37 --   21337 : 2    4 XNOR2_X1  A =   1.60  Df =2045.0  -10.4 ps  S =  37.7 ps  Cin =  2.3 ff  Cout =   5.8 ff  Cmax =  26.0 ff  G =  238  
+ABC: Path 38 --   23887 : 2    2 XOR2_X1   A =   1.60  Df =2104.0   -4.3 ps  S =  33.5 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  174  
+ABC: Path 39 --   23888 : 3    2 AOI21_X1  A =   1.06  Df =2149.4  -24.3 ps  S =  33.0 ps  Cin =  1.6 ff  Cout =   4.1 ff  Cmax =  25.3 ff  G =  259  
+ABC: Path 40 --   23889 : 3    2 OAI21_X1  A =   1.06  Df =2177.2   -7.1 ps  S =  28.5 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  26.1 ff  G =  236  
+ABC: Path 41 --   23891 : 3    2 AOI21_X1  A =   1.06  Df =2224.7  -27.8 ps  S =  38.5 ps  Cin =  1.6 ff  Cout =   5.3 ff  Cmax =  25.3 ff  G =  326  
+ABC: Path 42 --   23893 : 3    2 OAI21_X2  A =   1.86  Df =2244.7  -17.1 ps  S =  19.5 ps  Cin =  3.1 ff  Cout =   3.9 ff  Cmax =  52.1 ff  G =  120  
+ABC: Path 43 --   23932 : 2    2 XNOR2_X1  A =   1.60  Df =2289.9  -15.6 ps  S =  29.1 ps  Cin =  2.3 ff  Cout =   3.9 ff  Cmax =  26.0 ff  G =  162  
+ABC: Path 44 --   24034 : 2    2 XOR2_X1   A =   1.60  Df =2362.7  -28.7 ps  S =  42.0 ps  Cin =  2.3 ff  Cout =   6.1 ff  Cmax =  25.3 ff  G =  247  
+ABC: Path 45 --   26441 : 2    2 XNOR2_X1  A =   1.60  Df =2421.6  -18.6 ps  S =  29.1 ps  Cin =  2.3 ff  Cout =   3.9 ff  Cmax =  26.0 ff  G =  162  
+ABC: Path 46 --   26444 : 2    2 XOR2_X1   A =   1.60  Df =2479.2  -14.4 ps  S =  32.3 ps  Cin =  2.3 ff  Cout =   3.9 ff  Cmax =  25.3 ff  G =  163  
+ABC: Path 47 --   28998 : 2    2 XOR2_X1   A =   1.60  Df =2536.6   -2.9 ps  S =  28.5 ps  Cin =  2.3 ff  Cout =   3.2 ff  Cmax =  25.3 ff  G =  135  
+ABC: Path 48 --   29094 : 2    2 XOR2_X1   A =   1.60  Df =2600.2  -11.1 ps  S =  33.9 ps  Cin =  2.3 ff  Cout =   4.3 ff  Cmax =  25.3 ff  G =  174  
+ABC: Path 49 --   29095 : 3    2 AOI21_X1  A =   1.06  Df =2634.3   -8.3 ps  S =  33.0 ps  Cin =  1.6 ff  Cout =   4.1 ff  Cmax =  25.3 ff  G =  259  
+ABC: Path 50 --   29096 : 3    2 OAI21_X1  A =   1.06  Df =2672.8  -10.7 ps  S =  28.5 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  26.1 ff  G =  236  
+ABC: Path 51 --   29098 : 3    2 AOI21_X1  A =   1.06  Df =2702.4   -5.0 ps  S =  32.0 ps  Cin =  1.6 ff  Cout =   4.0 ff  Cmax =  25.3 ff  G =  253  
+ABC: Path 52 --   31559 : 2    2 XOR2_X1   A =   1.60  Df =2773.7  -10.0 ps  S =  32.3 ps  Cin =  2.3 ff  Cout =   3.8 ff  Cmax =  25.3 ff  G =  162  
+ABC: Path 53 --   31563 : 2    2 XNOR2_X1  A =   1.60  Df =2818.7   -2.3 ps  S =  28.8 ps  Cin =  2.3 ff  Cout =   3.9 ff  Cmax =  26.0 ff  G =  162  
+ABC: Path 54 --   31670 : 3    2 OAI21_X1  A =   1.06  Df =2864.5   -8.6 ps  S =  35.3 ps  Cin =  1.6 ff  Cout =   5.4 ff  Cmax =  26.1 ff  G =  326  
+ABC: Path 55 --   31672 : 3    2 AOI21_X2  A =   1.86  Df =2915.0  -30.4 ps  S =  22.7 ps  Cin =  3.1 ff  Cout =   4.0 ff  Cmax =  50.7 ff  G =  129  
+ABC: Path 56 --   31673 : 3    2 OAI21_X1  A =   1.06  Df =2939.8  -10.8 ps  S =  28.5 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  26.1 ff  G =  238  
+ABC: Path 57 --   31675 : 3    2 AOI21_X1  A =   1.06  Df =2979.1  -26.3 ps  S =  31.8 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  25.3 ff  G =  241  
+ABC: Path 58 --   31677 : 3    2 OAI21_X1  A =   1.06  Df =3003.6  -10.9 ps  S =  28.5 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  26.1 ff  G =  238  
+ABC: Path 59 --   31679 : 3    2 AOI21_X1  A =   1.06  Df =3052.5  -30.8 ps  S =  40.2 ps  Cin =  1.6 ff  Cout =   5.7 ff  Cmax =  25.3 ff  G =  366  
+ABC: Path 60 --   31680 : 3    2 OAI21_X2  A =   1.86  Df =3083.4  -13.4 ps  S =  30.5 ps  Cin =  3.1 ff  Cout =   8.6 ff  Cmax =  52.1 ff  G =  266  
+ABC: Path 61 --   31682 : 3    2 AOI21_X4  A =   3.46  Df =3118.5  -27.6 ps  S =  26.3 ps  Cin =  6.0 ff  Cout =  10.7 ff  Cmax = 101.0 ff  G =  169  
+ABC: Path 62 --   31684 : 3    2 OAI21_X4  A =   3.46  Df =3138.7  -13.9 ps  S =  23.2 ps  Cin =  6.1 ff  Cout =  10.7 ff  Cmax = 104.1 ff  G =  168  
+ABC: Path 63 --   31686 : 3    2 AOI21_X4  A =   3.46  Df =3168.3  -26.0 ps  S =  22.4 ps  Cin =  6.0 ff  Cout =   7.4 ff  Cmax = 101.0 ff  G =  118  
+ABC: Path 64 --   31688 : 3    1 OAI21_X2  A =   1.86  Df =3186.7  -13.4 ps  S =  20.6 ps  Cin =  3.1 ff  Cout =   4.3 ff  Cmax =  52.1 ff  G =  138  
+ABC: Path 65 --   32088 : 2    1 XOR2_X2   A =   2.39  Df =3265.6  -12.1 ps  S =  60.6 ps  Cin =  4.4 ff  Cout =  20.0 ff  Cmax =  50.5 ff  G =  458  
+ABC: Start-point = pi39 ($memrd$\coeff$circuits/fir16.v:31$6_DATA [6]).  End-point = po0 ($techmap$techmap$add$circuits/fir16.v:31$53.$auto$alumacc.cc:548:replace_alu$193.$xor$/opt/homebrew/bin/../share/yosys/techmap.v:296$825_Y [31]).
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:     1595
+ABC RESULTS:           AND2_X2 cells:        1
+ABC RESULTS:           AND3_X1 cells:      854
+ABC RESULTS:           AND3_X2 cells:        3
+ABC RESULTS:           AND4_X1 cells:      259
+ABC RESULTS:           AND4_X2 cells:        3
+ABC RESULTS:           AND4_X4 cells:        4
+ABC RESULTS:         AOI211_X1 cells:       26
+ABC RESULTS:          AOI21_X1 cells:     2646
+ABC RESULTS:          AOI21_X2 cells:       57
+ABC RESULTS:          AOI21_X4 cells:        3
+ABC RESULTS:         AOI221_X1 cells:        3
+ABC RESULTS:          AOI22_X1 cells:      544
+ABC RESULTS:          AOI22_X2 cells:        5
+ABC RESULTS:            BUF_X1 cells:       54
+ABC RESULTS:         CLKBUF_X1 cells:       23
+ABC RESULTS:            INV_X1 cells:     2527
+ABC RESULTS:           MUX2_X1 cells:       46
+ABC RESULTS:          NAND2_X1 cells:     4590
+ABC RESULTS:          NAND2_X2 cells:       11
+ABC RESULTS:          NAND3_X1 cells:      659
+ABC RESULTS:          NAND4_X1 cells:       20
+ABC RESULTS:           NOR2_X1 cells:     4480
+ABC RESULTS:           NOR2_X2 cells:        3
+ABC RESULTS:           NOR3_X1 cells:      802
+ABC RESULTS:           NOR4_X1 cells:        3
+ABC RESULTS:         OAI211_X1 cells:      117
+ABC RESULTS:          OAI21_X1 cells:     2137
+ABC RESULTS:          OAI21_X2 cells:       49
+ABC RESULTS:          OAI21_X4 cells:        1
+ABC RESULTS:         OAI221_X1 cells:        3
+ABC RESULTS:          OAI22_X1 cells:       99
+ABC RESULTS:            OR2_X1 cells:      990
+ABC RESULTS:            OR2_X2 cells:        3
+ABC RESULTS:            OR3_X1 cells:      869
+ABC RESULTS:            OR3_X2 cells:        6
+ABC RESULTS:            OR4_X1 cells:       29
+ABC RESULTS:            OR4_X2 cells:        1
+ABC RESULTS:          XNOR2_X1 cells:     4070
+ABC RESULTS:          XNOR2_X2 cells:       35
+ABC RESULTS:           XOR2_X1 cells:     3682
+ABC RESULTS:           XOR2_X2 cells:       45
+ABC RESULTS:        internal signals:    89713
+ABC RESULTS:           input signals:      786
+ABC RESULTS:          output signals:      288
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 12694 unused wires.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\fir16'.
+
+Warnings: 1 unique messages, 1 total
+End of script. Logfile hash: 7d594baf3c, time: 3.59s, user: 0.66s, system: 0.06s, MEM: 206.62 MB peak
+Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+Time spent: 89% 1x abc (3 sec), 4% 1x techmap (0 sec), ...

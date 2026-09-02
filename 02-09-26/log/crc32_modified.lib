@@ -1,0 +1,297 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+
+-- Executing script file `yosys.tcl' --
+
+1. Executing Verilog-2005 frontend: circuits/crc32.v
+Parsing Verilog input from `circuits/crc32.v' to AST representation.
+Generating RTLIL representation for module `\crc32'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \crc32
+
+2.2. Analyzing design hierarchy..
+Top module:  \crc32
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 64 switch rules as full_case in process $proc$circuits/crc32.v:10$2 in module crc32.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 2 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~64 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\crc32.$proc$circuits/crc32.v:10$2'.
+     1/64: $64\crc[31:0]
+     2/64: $63\crc[31:0]
+     3/64: $62\crc[31:0]
+     4/64: $61\crc[31:0]
+     5/64: $60\crc[31:0]
+     6/64: $59\crc[31:0]
+     7/64: $58\crc[31:0]
+     8/64: $57\crc[31:0]
+     9/64: $56\crc[31:0]
+    10/64: $55\crc[31:0]
+    11/64: $54\crc[31:0]
+    12/64: $53\crc[31:0]
+    13/64: $52\crc[31:0]
+    14/64: $51\crc[31:0]
+    15/64: $50\crc[31:0]
+    16/64: $49\crc[31:0]
+    17/64: $48\crc[31:0]
+    18/64: $47\crc[31:0]
+    19/64: $46\crc[31:0]
+    20/64: $45\crc[31:0]
+    21/64: $44\crc[31:0]
+    22/64: $43\crc[31:0]
+    23/64: $42\crc[31:0]
+    24/64: $41\crc[31:0]
+    25/64: $40\crc[31:0]
+    26/64: $39\crc[31:0]
+    27/64: $38\crc[31:0]
+    28/64: $37\crc[31:0]
+    29/64: $36\crc[31:0]
+    30/64: $35\crc[31:0]
+    31/64: $34\crc[31:0]
+    32/64: $33\crc[31:0]
+    33/64: $32\crc[31:0]
+    34/64: $31\crc[31:0]
+    35/64: $30\crc[31:0]
+    36/64: $29\crc[31:0]
+    37/64: $28\crc[31:0]
+    38/64: $27\crc[31:0]
+    39/64: $26\crc[31:0]
+    40/64: $25\crc[31:0]
+    41/64: $24\crc[31:0]
+    42/64: $23\crc[31:0]
+    43/64: $22\crc[31:0]
+    44/64: $21\crc[31:0]
+    45/64: $20\crc[31:0]
+    46/64: $19\crc[31:0]
+    47/64: $18\crc[31:0]
+    48/64: $17\crc[31:0]
+    49/64: $16\crc[31:0]
+    50/64: $15\crc[31:0]
+    51/64: $14\crc[31:0]
+    52/64: $13\crc[31:0]
+    53/64: $12\crc[31:0]
+    54/64: $11\crc[31:0]
+    55/64: $10\crc[31:0]
+    56/64: $9\crc[31:0]
+    57/64: $8\crc[31:0]
+    58/64: $7\crc[31:0]
+    59/64: $6\crc[31:0]
+    60/64: $5\crc[31:0]
+    61/64: $4\crc[31:0]
+    62/64: $3\crc[31:0]
+    63/64: $2\crc[31:0]
+    64/64: $1\crc[31:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\crc32.\i' from process `\crc32.$proc$circuits/crc32.v:10$2'.
+No latch inferred for signal `\crc32.\crc' from process `\crc32.$proc$circuits/crc32.v:10$2'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 64 empty switches in `\crc32.$proc$circuits/crc32.v:10$2'.
+Removing empty process `crc32.$proc$circuits/crc32.v:10$2'.
+Cleaned up 64 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module crc32.
+<suppressed ~64 debug messages>
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~269 debug messages>
+
+6. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    unmapped dff cell: $_DFF_P_
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    unmapped dff cell: $_DFF_PN0_
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+6.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\crc32':
+
+7. Executing ABC pass (technology mapping using ABC).
+
+7.1. Extracting gate netlist of module `\crc32' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_d38185c9.scl (1 files)
+
+7.1.1. Executed ABC.
+Extracted 3008 gates and 3105 wires to a netlist network with 96 inputs and 32 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_d38185c9.scl 
+ABC: + read_constr -v /Users/adi/Developer/Repo/BTP-Sem7/02-09-26/constraints.sdc 
+ABC: Unrecognized token "#".
+ABC: Unrecognized token "create_clock".
+ABC: Unrecognized token "set_input_delay".
+ABC: Unrecognized token "set_output_delay".
+ABC: Unrecognized token "#".
+ABC: Setting output load to be 20.000000.
+ABC: Unrecognized token "#".
+ABC: Setting driving cell to be "-lib_cell".
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + upsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + dnsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: WireLoad = "none"  Gates =    585 (  0.2 %)   Cap =  6.6 ff ( 13.8 %)   Area =     1238.76 ( 63.1 %)   Delay =  4891.97 ps  ( 46.7 %)               
+ABC: Path  0 --       5 : 0    1 pi         A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   5.4 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     140 : 2    3 XOR2_X2.5  A =   2.79  Df = 206.9   -6.6 ps  S = 132.4 ps  Cin =  5.3 ff  Cout =  11.1 ff  Cmax =  63.0 ff  G =  205  
+ABC: Path  2 --     141 : 2    7 XOR2_X3    A =   3.19  Df = 485.8  -41.4 ps  S = 165.9 ps  Cin =  6.4 ff  Cout =  18.9 ff  Cmax =  75.6 ff  G =  291  
+ABC: Path  3 --     144 : 2    2 XOR2_X2    A =   2.39  Df = 758.4 -105.3 ps  S = 149.6 ps  Cin =  4.3 ff  Cout =  10.4 ff  Cmax =  50.4 ff  G =  229  
+ABC: Path  4 --     145 : 2    4 XNOR2_X3.5 A =   4.26  Df = 955.1 -108.5 ps  S = 127.4 ps  Cin =  7.1 ff  Cout =  17.1 ff  Cmax =  90.9 ff  G =  237  
+ABC: Path  5 --     205 : 2    4 XOR2_X3    A =   3.19  Df =1170.6  -82.0 ps  S = 135.5 ps  Cin =  6.4 ff  Cout =  11.6 ff  Cmax =  75.6 ff  G =  176  
+ABC: Path  6 --     209 : 2    1 XNOR2_X2.5 A =   3.19  Df =1335.0  -60.5 ps  S = 122.5 ps  Cin =  5.2 ff  Cout =  11.5 ff  Cmax =  64.9 ff  G =  211  
+ABC: Path  7 --     210 : 2    6 XNOR2_X5   A =   5.85  Df =1501.4  -43.3 ps  S = 111.9 ps  Cin = 10.0 ff  Cout =  20.2 ff  Cmax = 129.8 ff  G =  196  
+ABC: Path  8 --     323 : 2    3 XOR2_X2    A =   2.39  Df =1718.8   -9.7 ps  S = 140.6 ps  Cin =  4.3 ff  Cout =   9.3 ff  Cmax =  50.4 ff  G =  209  
+ABC: Path  9 --     324 : 2    1 XNOR2_X2   A =   2.66  Df =1907.5  -13.0 ps  S = 113.2 ps  Cin =  4.2 ff  Cout =   8.1 ff  Cmax =  51.9 ff  G =  183  
+ABC: Path 10 --     325 : 2    6 XNOR2_X3.5 A =   4.26  Df =2115.2  -41.6 ps  S = 135.0 ps  Cin =  7.1 ff  Cout =  18.7 ff  Cmax =  90.9 ff  G =  253  
+ABC: Path 11 --     337 : 2    4 XNOR2_X2   A =   2.66  Df =2323.7  -35.0 ps  S = 141.3 ps  Cin =  4.2 ff  Cout =  11.3 ff  Cmax =  51.9 ff  G =  263  
+ABC: Path 12 --     338 : 2    1 XOR2_X2    A =   2.39  Df =2563.3   -2.9 ps  S = 156.1 ps  Cin =  4.3 ff  Cout =  11.5 ff  Cmax =  50.4 ff  G =  253  
+ABC: Path 13 --     339 : 2    5 XNOR2_X5   A =   5.85  Df =2745.8   -7.4 ps  S = 111.4 ps  Cin = 10.0 ff  Cout =  20.0 ff  Cmax = 129.8 ff  G =  195  
+ABC: Path 14 --     445 : 2    1 XOR2_X2.5  A =   2.79  Df =2995.7  -37.2 ps  S = 114.9 ps  Cin =  5.3 ff  Cout =   8.1 ff  Cmax =  63.0 ff  G =  145  
+ABC: Path 15 --     446 : 2    6 XNOR2_X3.5 A =   4.26  Df =3177.5  -12.5 ps  S = 140.9 ps  Cin =  7.1 ff  Cout =  19.8 ff  Cmax =  90.9 ff  G =  270  
+ABC: Path 16 --     561 : 2    1 XOR2_X2.5  A =   2.79  Df =3387.9   -2.6 ps  S = 110.7 ps  Cin =  5.3 ff  Cout =   7.0 ff  Cmax =  63.0 ff  G =  125  
+ABC: Path 17 --     562 : 2    4 XNOR2_X3   A =   3.72  Df =3610.3  -33.1 ps  S = 158.5 ps  Cin =  6.1 ff  Cout =  20.0 ff  Cmax =  77.9 ff  G =  319  
+ABC: Path 18 --     578 : 2    1 XOR2_X2    A =   2.39  Df =3835.5  -31.6 ps  S = 110.8 ps  Cin =  4.3 ff  Cout =   5.9 ff  Cmax =  50.4 ff  G =  130  
+ABC: Path 19 --     579 : 2    6 XNOR2_X2.5 A =   3.19  Df =4061.3  -25.5 ps  S = 188.2 ps  Cin =  5.2 ff  Cout =  20.8 ff  Cmax =  64.9 ff  G =  390  
+ABC: Path 20 --     597 : 2    4 XNOR2_X2   A =   2.66  Df =4297.6  -30.4 ps  S = 155.2 ps  Cin =  4.2 ff  Cout =  12.9 ff  Cmax =  51.9 ff  G =  293  
+ABC: Path 21 --     677 : 2    2 XNOR2_X2.5 A =   3.19  Df =4481.1  -12.8 ps  S = 106.4 ps  Cin =  5.2 ff  Cout =   9.2 ff  Cmax =  64.9 ff  G =  173  
+ABC: Path 22 --     678 : 2    1 XOR2_X1.5  A =   2.00  Df =4892.0 -158.9 ps  S = 289.2 ps  Cin =  3.3 ff  Cout =  20.0 ff  Cmax =  37.8 ff  G =  607  
+ABC: Start-point = pi4 (\crc_in [25]).  End-point = po15 ($procmux$132_Y [15]).
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.1.2. Re-integrating ABC results.
+ABC RESULTS:            INV_X1 cells:        1
+ABC RESULTS:          XNOR2_X1 cells:      296
+ABC RESULTS:        XNOR2_X1.5 cells:       50
+ABC RESULTS:          XNOR2_X2 cells:       38
+ABC RESULTS:        XNOR2_X2.5 cells:       30
+ABC RESULTS:          XNOR2_X3 cells:       18
+ABC RESULTS:        XNOR2_X3.5 cells:       10
+ABC RESULTS:          XNOR2_X5 cells:       19
+ABC RESULTS:           XOR2_X1 cells:       72
+ABC RESULTS:         XOR2_X1.5 cells:       16
+ABC RESULTS:           XOR2_X2 cells:       16
+ABC RESULTS:         XOR2_X2.5 cells:       14
+ABC RESULTS:           XOR2_X3 cells:        4
+ABC RESULTS:           XOR2_X5 cells:        1
+ABC RESULTS:        internal signals:     2977
+ABC RESULTS:           input signals:       96
+ABC RESULTS:          output signals:       32
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 514 unused wires.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\crc32'.
+
+End of script. Logfile hash: 964aa51c36, time: 0.66s, user: 0.03s, system: 0.00s, MEM: 26.11 MB peak
+Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+Time spent: 96% 1x abc (0 sec), 1% 3x read_verilog (0 sec), ...

@@ -1,0 +1,336 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+
+-- Executing script file `yosys.tcl' --
+
+1. Executing Verilog-2005 frontend: circuits/lzc32.v
+Parsing Verilog input from `circuits/lzc32.v' to AST representation.
+Generating RTLIL representation for module `\lzc32'.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:10.9-10.19.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Warning: wire '\count' is assigned in a block at circuits/lzc32.v:15.17-15.31.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \lzc32
+
+2.2. Analyzing design hierarchy..
+Top module:  \lzc32
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 32 switch rules as full_case in process $proc$circuits/lzc32.v:9$2 in module lzc32.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~32 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\lzc32.$proc$circuits/lzc32.v:9$2'.
+     1/64: $32\found[0:0]
+     2/64: $32\count[5:0]
+     3/64: $31\found[0:0]
+     4/64: $31\count[5:0]
+     5/64: $30\found[0:0]
+     6/64: $30\count[5:0]
+     7/64: $29\found[0:0]
+     8/64: $29\count[5:0]
+     9/64: $28\found[0:0]
+    10/64: $28\count[5:0]
+    11/64: $27\found[0:0]
+    12/64: $27\count[5:0]
+    13/64: $26\found[0:0]
+    14/64: $26\count[5:0]
+    15/64: $25\found[0:0]
+    16/64: $25\count[5:0]
+    17/64: $24\found[0:0]
+    18/64: $24\count[5:0]
+    19/64: $23\found[0:0]
+    20/64: $23\count[5:0]
+    21/64: $22\found[0:0]
+    22/64: $22\count[5:0]
+    23/64: $21\found[0:0]
+    24/64: $21\count[5:0]
+    25/64: $20\found[0:0]
+    26/64: $20\count[5:0]
+    27/64: $19\found[0:0]
+    28/64: $19\count[5:0]
+    29/64: $18\found[0:0]
+    30/64: $18\count[5:0]
+    31/64: $17\found[0:0]
+    32/64: $17\count[5:0]
+    33/64: $16\found[0:0]
+    34/64: $16\count[5:0]
+    35/64: $15\found[0:0]
+    36/64: $15\count[5:0]
+    37/64: $14\found[0:0]
+    38/64: $14\count[5:0]
+    39/64: $13\found[0:0]
+    40/64: $13\count[5:0]
+    41/64: $12\found[0:0]
+    42/64: $12\count[5:0]
+    43/64: $11\found[0:0]
+    44/64: $11\count[5:0]
+    45/64: $10\found[0:0]
+    46/64: $10\count[5:0]
+    47/64: $9\found[0:0]
+    48/64: $9\count[5:0]
+    49/64: $8\found[0:0]
+    50/64: $8\count[5:0]
+    51/64: $7\found[0:0]
+    52/64: $7\count[5:0]
+    53/64: $6\found[0:0]
+    54/64: $6\count[5:0]
+    55/64: $5\found[0:0]
+    56/64: $5\count[5:0]
+    57/64: $4\found[0:0]
+    58/64: $4\count[5:0]
+    59/64: $3\found[0:0]
+    60/64: $3\count[5:0]
+    61/64: $2\found[0:0]
+    62/64: $2\count[5:0]
+    63/64: $1\found[0:0]
+    64/64: $1\count[5:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\lzc32.\i' from process `\lzc32.$proc$circuits/lzc32.v:9$2'.
+No latch inferred for signal `\lzc32.\count' from process `\lzc32.$proc$circuits/lzc32.v:9$2'.
+No latch inferred for signal `\lzc32.\found' from process `\lzc32.$proc$circuits/lzc32.v:9$2'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 32 empty switches in `\lzc32.$proc$circuits/lzc32.v:9$2'.
+Removing empty process `lzc32.$proc$circuits/lzc32.v:9$2'.
+Cleaned up 32 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module lzc32.
+<suppressed ~2 debug messages>
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~203 debug messages>
+
+6. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+6.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\lzc32':
+
+7. Executing ABC pass (technology mapping using ABC).
+
+7.1. Extracting gate netlist of module `\lzc32' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl (1 files)
+
+7.1.1. Executed ABC.
+Extracted 286 gates and 320 wires to a netlist network with 32 inputs and 6 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FA_X1").
+ABC: + read_constr -v /Users/adi/Developer/Repo/BTP-Sem7/02-09-26/constraints.sdc 
+ABC: Unrecognized token "#".
+ABC: Unrecognized token "create_clock".
+ABC: Unrecognized token "set_input_delay".
+ABC: Unrecognized token "set_output_delay".
+ABC: Unrecognized token "#".
+ABC: Setting output load to be 20.000000.
+ABC: Unrecognized token "#".
+ABC: Setting driving cell to be "-lib_cell".
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + upsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + dnsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: WireLoad = "none"  Gates =     93 ( 23.7 %)   Cap =  4.6 ff (  8.5 %)   Area =      117.04 ( 83.9 %)   Delay =   533.82 ps  ( 19.4 %)               
+ABC: Path  0 --      29 : 0    3 pi       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   7.0 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --      42 : 4    3 OR4_X4   A =   3.46  Df = 105.2  -81.7 ps  S =  16.5 ps  Cin =  3.3 ff  Cout =   8.7 ff  Cmax = 241.7 ff  G =  253  
+ABC: Path  2 --      44 : 4    5 NOR4_X4  A =   4.79  Df = 193.5 -146.6 ps  S =  50.6 ps  Cin =  5.8 ff  Cout =   9.9 ff  Cmax =  41.5 ff  G =  164  
+ABC: Path  3 --      48 : 4    3 NAND4_X2 A =   2.39  Df = 245.1 -170.6 ps  S =  43.2 ps  Cin =  3.3 ff  Cout =   9.3 ff  Cmax = 111.5 ff  G =  277  
+ABC: Path  4 --      49 : 4    3 NOR4_X4  A =   4.79  Df = 345.4 -254.4 ps  S =  49.8 ps  Cin =  5.8 ff  Cout =   9.5 ff  Cmax =  41.5 ff  G =  155  
+ABC: Path  5 --      53 : 4    5 NAND4_X4 A =   4.79  Df = 384.2 -267.0 ps  S =  19.4 ps  Cin =  5.7 ff  Cout =  10.0 ff  Cmax = 222.8 ff  G =  168  
+ABC: Path  6 --      55 : 6    3 OAI33_X1 A =   1.86  Df = 462.6 -319.8 ps  S =  65.7 ps  Cin =  1.5 ff  Cout =   2.8 ff  Cmax =  11.5 ff  G =  165  
+ABC: Path  7 --      70 : 4    1 OR4_X1   A =   1.60  Df = 503.5 -129.6 ps  S =  19.1 ps  Cin =  0.9 ff  Cout =   3.4 ff  Cmax =  60.6 ff  G =  363  
+ABC: Path  8 --      71 : 1    1 BUF_X4   A =   1.86  Df = 533.8 -124.5 ps  S =  14.4 ps  Cin =  3.2 ff  Cout =  20.0 ff  Cmax = 242.3 ff  G =  624  
+ABC: Start-point = pi28 (\x [27]).  End-point = po0 ($procmux$71_Y [4]).
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND4_X1 cells:        1
+ABC RESULTS:         AOI211_X1 cells:        2
+ABC RESULTS:          AOI21_X1 cells:        4
+ABC RESULTS:         AOI221_X1 cells:        1
+ABC RESULTS:            BUF_X2 cells:        2
+ABC RESULTS:            BUF_X4 cells:        3
+ABC RESULTS:            INV_X1 cells:       17
+ABC RESULTS:          NAND2_X1 cells:        6
+ABC RESULTS:          NAND3_X1 cells:        2
+ABC RESULTS:          NAND4_X1 cells:        3
+ABC RESULTS:          NAND4_X2 cells:        1
+ABC RESULTS:          NAND4_X4 cells:        1
+ABC RESULTS:           NOR2_X1 cells:       12
+ABC RESULTS:           NOR3_X1 cells:        5
+ABC RESULTS:           NOR3_X2 cells:        1
+ABC RESULTS:           NOR4_X1 cells:        6
+ABC RESULTS:           NOR4_X4 cells:        2
+ABC RESULTS:         OAI211_X1 cells:        4
+ABC RESULTS:          OAI21_X1 cells:        6
+ABC RESULTS:          OAI33_X1 cells:        2
+ABC RESULTS:            OR2_X1 cells:        2
+ABC RESULTS:            OR3_X1 cells:        3
+ABC RESULTS:            OR3_X2 cells:        1
+ABC RESULTS:            OR3_X4 cells:        1
+ABC RESULTS:            OR4_X1 cells:        3
+ABC RESULTS:            OR4_X4 cells:        2
+ABC RESULTS:        internal signals:      282
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:        6
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 298 unused wires.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\lzc32'.
+
+Warnings: 2 unique messages, 33 total
+End of script. Logfile hash: 0bfba50f05, time: 0.10s, user: 0.03s, system: 0.00s, MEM: 30.91 MB peak
+Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+Time spent: 72% 1x abc (0 sec), 18% 1x dfflibmap (0 sec), ...

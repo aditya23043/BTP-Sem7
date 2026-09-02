@@ -1,0 +1,310 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+
+-- Executing script file `yosys.tcl' --
+
+1. Executing Verilog-2005 frontend: circuits/alu32.v
+Parsing Verilog input from `circuits/alu32.v' to AST representation.
+Generating RTLIL representation for module `\alu32'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \alu32
+
+2.2. Analyzing design hierarchy..
+Top module:  \alu32
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$circuits/alu32.v:12$1 in module alu32.
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\alu32.$proc$circuits/alu32.v:12$1'.
+     1/1: $1\tmp[32:0]
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\alu32.\tmp' from process `\alu32.$proc$circuits/alu32.v:12$1'.
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\alu32.$proc$circuits/alu32.v:12$1'.
+Removing empty process `alu32.$proc$circuits/alu32.v:12$1'.
+Cleaned up 1 empty switch.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module alu32.
+<suppressed ~2 debug messages>
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+Running "alumacc" on wrapper $extern:wrap:$add:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Running "alumacc" on wrapper $extern:wrap:$sub:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$sub:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$sub:Y_WIDTH=33:B_WIDTH=33:A_WIDTH=33:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$constmap:6111415c3ecfd9bb520e2072bfee38e7d8bfb139$paramod$335cfd09f1afa8139c4aafcbbe5f361887b79c5e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$constmap:6111415c3ecfd9bb520e2072bfee38e7d8bfb139$paramod$feecc7a0dbd012970970f2858f15e786e251f677\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Running "alumacc" on wrapper $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=32:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=32:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$lt:Y_WIDTH=1:B_WIDTH=32:A_WIDTH=32:B_SIGNED=0:A_SIGNED=0:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $pmux.
+Using template $paramod$cc6a978c1b57cdb49efcec348c88d8e28bf1a01f\_90_alu for cells of type $alu.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100001 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100001 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1703 debug messages>
+
+6. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+6.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~8 debug messages>
+Mapping DFF cells in module `\alu32':
+
+7. Executing ABC pass (technology mapping using ABC).
+
+7.1. Extracting gate netlist of module `\alu32' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl (1 files)
+
+7.1.1. Executed ABC.
+Extracted 2400 gates and 2470 wires to a netlist network with 68 inputs and 34 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl 
+ABC: Warning: Detected 2 multi-output cells (for example, "FA_X1").
+ABC: + read_constr -v /Users/adi/Developer/Repo/BTP-Sem7/02-09-26/constraints.sdc 
+ABC: Unrecognized token "#".
+ABC: Unrecognized token "create_clock".
+ABC: Unrecognized token "set_input_delay".
+ABC: Unrecognized token "set_output_delay".
+ABC: Unrecognized token "#".
+ABC: Setting output load to be 20.000000.
+ABC: Unrecognized token "#".
+ABC: Setting driving cell to be "-lib_cell".
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + upsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + dnsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: WireLoad = "none"  Gates =   1017 ( 10.2 %)   Cap =  4.9 ff (  5.8 %)   Area =     1294.62 ( 85.0 %)   Delay =  1255.21 ps  ( 12.6 %)               
+ABC: Path  0 --      62 : 0   56 pi        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout = 134.2 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     388 : 2    1 OR2_X4    A =   2.39  Df =  41.9  -22.3 ps  S =   8.4 ps  Cin =  3.2 ff  Cout =   6.6 ff  Cmax = 242.3 ff  G =  199  
+ABC: Path  2 --     389 : 4    2 AOI22_X4  A =   4.52  Df =  85.4  -47.7 ps  S =  22.6 ps  Cin =  6.2 ff  Cout =   4.9 ff  Cmax =  98.0 ff  G =   74  
+ABC: Path  3 --     390 : 3    3 AOI21_X2  A =   1.86  Df = 103.4  -18.3 ps  S =  28.5 ps  Cin =  3.1 ff  Cout =   6.4 ff  Cmax =  50.7 ff  G =  196  
+ABC: Path  4 --     391 : 3    4 OAI21_X2  A =   1.86  Df = 139.3  -32.5 ps  S =  26.0 ps  Cin =  3.1 ff  Cout =   6.6 ff  Cmax =  52.1 ff  G =  200  
+ABC: Path  5 --     393 : 4    2 OAI211_X1 A =   1.33  Df = 169.9  -15.6 ps  S =  33.4 ps  Cin =  1.6 ff  Cout =   4.4 ff  Cmax =  25.6 ff  G =  266  
+ABC: Path  6 --     394 : 3    3 AOI21_X2  A =   1.86  Df = 211.7  -34.8 ps  S =  27.4 ps  Cin =  3.1 ff  Cout =   5.9 ff  Cmax =  50.7 ff  G =  188  
+ABC: Path  7 --     395 : 3    3 OAI21_X2  A =   1.86  Df = 235.5  -18.1 ps  S =  24.5 ps  Cin =  3.1 ff  Cout =   6.0 ff  Cmax =  52.1 ff  G =  185  
+ABC: Path  8 --     396 : 3    4 AOI21_X2  A =   1.86  Df = 278.8  -38.7 ps  S =  30.7 ps  Cin =  3.1 ff  Cout =   7.3 ff  Cmax =  50.7 ff  G =  235  
+ABC: Path  9 --     397 : 4    3 OAI211_X2 A =   2.39  Df = 309.1  -27.1 ps  S =  23.4 ps  Cin =  3.1 ff  Cout =   4.2 ff  Cmax =  50.8 ff  G =  130  
+ABC: Path 10 --     398 : 3    1 OAI21_X1  A =   1.06  Df = 339.1  -40.7 ps  S =  23.3 ps  Cin =  1.6 ff  Cout =   1.7 ff  Cmax =  26.1 ff  G =   97  
+ABC: Path 11 --     400 : 4    2 AOI211_X1 A =   1.33  Df = 372.8   -7.9 ps  S =  65.4 ps  Cin =  1.6 ff  Cout =   5.7 ff  Cmax =  14.5 ff  G =  345  
+ABC: Path 12 --     401 : 3    2 OAI21_X2  A =   1.86  Df = 395.9   -1.4 ps  S =  22.8 ps  Cin =  3.1 ff  Cout =   4.2 ff  Cmax =  52.1 ff  G =  130  
+ABC: Path 13 --     402 : 3    3 AOI21_X1  A =   1.06  Df = 451.7  -28.2 ps  S =  44.7 ps  Cin =  1.6 ff  Cout =   6.7 ff  Cmax =  25.3 ff  G =  409  
+ABC: Path 14 --     403 : 2    2 NOR2_X2   A =   1.33  Df = 467.4  -10.6 ps  S =  19.7 ps  Cin =  3.1 ff  Cout =   4.3 ff  Cmax =  53.4 ff  G =  135  
+ABC: Path 15 --     838 : 3    1 OR3_X1    A =   1.33  Df = 550.6  -63.2 ps  S =  12.9 ps  Cin =  0.9 ff  Cout =   1.7 ff  Cmax =  60.6 ff  G =  176  
+ABC: Path 16 --     839 : 3    1 NAND3_X1  A =   1.06  Df = 575.4  -32.2 ps  S =  16.6 ps  Cin =  1.6 ff  Cout =   2.9 ff  Cmax =  58.4 ff  G =  185  
+ABC: Path 17 --     853 : 4    2 NAND4_X2  A =   2.39  Df = 636.1  -38.6 ps  S =  46.4 ps  Cin =  3.3 ff  Cout =  21.8 ff  Cmax = 111.5 ff  G =  655  
+ABC: Path 18 --    1110 : 3    1 NOR3_X1   A =   1.06  Df = 686.4  -77.5 ps  S =  29.2 ps  Cin =  1.6 ff  Cout =   1.7 ff  Cmax =  16.0 ff  G =  100  
+ABC: Path 19 --    1111 : 2    1 NAND2_X1  A =   0.80  Df = 708.7  -77.9 ps  S =  13.7 ps  Cin =  1.6 ff  Cout =   3.6 ff  Cmax =  59.4 ff  G =  226  
+ABC: Path 20 --    1112 : 4    1 OR4_X4    A =   3.46  Df = 814.3  -91.1 ps  S =  15.1 ps  Cin =  3.3 ff  Cout =   3.6 ff  Cmax = 241.7 ff  G =  109  
+ABC: Path 21 --    1113 : 4    1 OR4_X4    A =   3.46  Df = 920.4  -62.3 ps  S =  15.1 ps  Cin =  3.3 ff  Cout =   3.4 ff  Cmax = 241.7 ff  G =  103  
+ABC: Path 22 --    1114 : 3    1 NOR3_X2   A =   1.86  Df = 965.5  -94.5 ps  S =  23.3 ps  Cin =  3.2 ff  Cout =   1.6 ff  Cmax =  31.7 ff  G =   48  
+ABC: Path 23 --    1116 : 2    1 NAND2_X1  A =   0.80  Df = 981.1  -28.7 ps  S =  10.2 ps  Cin =  1.6 ff  Cout =   1.7 ff  Cmax =  59.4 ff  G =  104  
+ABC: Path 24 --    1117 : 2    1 OR2_X2    A =   1.33  Df =1028.6  -26.3 ps  S =   8.9 ps  Cin =  1.6 ff  Cout =   3.6 ff  Cmax = 121.2 ff  G =  220  
+ABC: Path 25 --    1118 : 4    1 OR4_X4    A =   3.46  Df =1134.8  -56.0 ps  S =  16.0 ps  Cin =  3.3 ff  Cout =   6.0 ff  Cmax = 241.7 ff  G =  181  
+ABC: Path 26 --    1119 : 4    1 NOR4_X4   A =   4.79  Df =1255.2 -124.3 ps  S =  75.0 ps  Cin =  5.8 ff  Cout =  20.0 ff  Cmax =  41.5 ff  G =  344  
+ABC: Start-point = pi61 (\b [1]).  End-point = po33 ($eq$circuits/alu32.v:29$12_Y).
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:       37
+ABC RESULTS:           AND2_X2 cells:        1
+ABC RESULTS:           AND2_X4 cells:        1
+ABC RESULTS:           AND3_X1 cells:       13
+ABC RESULTS:           AND3_X4 cells:        1
+ABC RESULTS:           AND4_X1 cells:        2
+ABC RESULTS:         AOI211_X1 cells:       35
+ABC RESULTS:         AOI211_X2 cells:        3
+ABC RESULTS:          AOI21_X1 cells:       96
+ABC RESULTS:          AOI21_X2 cells:        9
+ABC RESULTS:          AOI21_X4 cells:        5
+ABC RESULTS:         AOI221_X1 cells:       17
+ABC RESULTS:         AOI221_X4 cells:        1
+ABC RESULTS:         AOI222_X1 cells:        2
+ABC RESULTS:          AOI22_X1 cells:       11
+ABC RESULTS:          AOI22_X4 cells:        1
+ABC RESULTS:            BUF_X1 cells:       30
+ABC RESULTS:           BUF_X16 cells:        1
+ABC RESULTS:            BUF_X2 cells:        3
+ABC RESULTS:            BUF_X4 cells:        8
+ABC RESULTS:            BUF_X8 cells:        2
+ABC RESULTS:         CLKBUF_X1 cells:        1
+ABC RESULTS:            INV_X1 cells:       54
+ABC RESULTS:           INV_X16 cells:        2
+ABC RESULTS:            INV_X2 cells:        2
+ABC RESULTS:            INV_X8 cells:        1
+ABC RESULTS:           MUX2_X1 cells:      107
+ABC RESULTS:           MUX2_X2 cells:        1
+ABC RESULTS:          NAND2_X1 cells:      108
+ABC RESULTS:          NAND2_X2 cells:        3
+ABC RESULTS:          NAND2_X4 cells:        1
+ABC RESULTS:          NAND3_X1 cells:       21
+ABC RESULTS:          NAND3_X2 cells:        1
+ABC RESULTS:          NAND4_X1 cells:        2
+ABC RESULTS:          NAND4_X2 cells:        2
+ABC RESULTS:           NOR2_X1 cells:       93
+ABC RESULTS:           NOR2_X2 cells:        6
+ABC RESULTS:           NOR3_X1 cells:       26
+ABC RESULTS:           NOR3_X2 cells:        3
+ABC RESULTS:           NOR4_X1 cells:        3
+ABC RESULTS:           NOR4_X4 cells:        1
+ABC RESULTS:         OAI211_X1 cells:       35
+ABC RESULTS:         OAI211_X2 cells:        8
+ABC RESULTS:         OAI211_X4 cells:        2
+ABC RESULTS:          OAI21_X1 cells:       94
+ABC RESULTS:          OAI21_X2 cells:       15
+ABC RESULTS:          OAI21_X4 cells:        5
+ABC RESULTS:         OAI221_X1 cells:       15
+ABC RESULTS:         OAI221_X2 cells:        3
+ABC RESULTS:          OAI22_X1 cells:        8
+ABC RESULTS:          OAI33_X1 cells:        1
+ABC RESULTS:            OR2_X1 cells:       40
+ABC RESULTS:            OR2_X2 cells:        4
+ABC RESULTS:            OR2_X4 cells:        2
+ABC RESULTS:            OR3_X1 cells:       12
+ABC RESULTS:            OR3_X4 cells:        2
+ABC RESULTS:            OR4_X1 cells:        3
+ABC RESULTS:            OR4_X4 cells:        4
+ABC RESULTS:          XNOR2_X1 cells:       26
+ABC RESULTS:          XNOR2_X2 cells:        1
+ABC RESULTS:           XOR2_X1 cells:       18
+ABC RESULTS:           XOR2_X2 cells:        2
+ABC RESULTS:        internal signals:     2368
+ABC RESULTS:           input signals:       68
+ABC RESULTS:          output signals:       34
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 1083 unused wires.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\alu32'.
+
+End of script. Logfile hash: 04e0c77b8d, time: 0.26s, user: 0.07s, system: 0.01s, MEM: 40.03 MB peak
+Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+Time spent: 76% 1x abc (0 sec), 8% 1x techmap (0 sec), ...

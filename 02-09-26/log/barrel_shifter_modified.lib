@@ -1,0 +1,232 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+
+-- Executing script file `yosys.tcl' --
+
+1. Executing Verilog-2005 frontend: circuits/barrel_shifter.v
+Parsing Verilog input from `circuits/barrel_shifter.v' to AST representation.
+Generating RTLIL representation for module `\barrel_shifter'.
+Successfully finished Verilog frontend.
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1. Analyzing design hierarchy..
+Top module:  \barrel_shifter
+
+2.2. Analyzing design hierarchy..
+Top module:  \barrel_shifter
+Removed 0 unused modules.
+
+3. Executing PROC pass (convert processes to netlists).
+
+3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+3.4. Executing PROC_INIT pass (extract init attributes).
+
+3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module barrel_shifter.
+
+4. Executing FLATTEN pass (flatten design).
+
+5. Executing TECHMAP pass (map to technology primitives).
+
+5.1. Executing Verilog-2005 frontend: /opt/homebrew/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/opt/homebrew/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+5.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+No more expansions possible.
+<suppressed ~92 debug messages>
+
+6. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    unmapped dff cell: $_DFF_P_
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    unmapped dff cell: $_DFF_PN0_
+    unmapped dff cell: $_DFF_PN1_
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    unmapped dff cell: $_DFFE_PP_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+6.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\barrel_shifter':
+
+7. Executing ABC pass (technology mapping using ABC).
+
+7.1. Extracting gate netlist of module `\barrel_shifter' to `<abc-temp-dir>/input.blif'..
+ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_d38185c9.scl (1 files)
+
+7.1.1. Executed ABC.
+Extracted 480 gates and 520 wires to a netlist network with 39 inputs and 32 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_d38185c9.scl 
+ABC: + read_constr -v /Users/adi/Developer/Repo/BTP-Sem7/02-09-26/constraints.sdc 
+ABC: Unrecognized token "#".
+ABC: Unrecognized token "create_clock".
+ABC: Unrecognized token "set_input_delay".
+ABC: Unrecognized token "set_output_delay".
+ABC: Unrecognized token "#".
+ABC: Setting output load to be 20.000000.
+ABC: Unrecognized token "#".
+ABC: Setting driving cell to be "-lib_cell".
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + buffer 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + upsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + dnsize 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
+ABC: WireLoad = "none"  Gates =    808 (  5.9 %)   Cap =  3.7 ff (  4.8 %)   Area =      762.49 ( 83.2 %)   Delay =  1322.74 ps  ( 58.0 %)               
+ABC: Path  0 --      11 : 0    3 pi         A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   7.5 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     223 : 2    1 AND2_X5    A =   2.93  Df =  80.2  -12.7 ps  S =  22.2 ps  Cin =  3.9 ff  Cout =   5.6 ff  Cmax = 302.1 ff  G =  140  
+ABC: Path  2 --     224 : 2    1 NOR2_X3.5  A =   2.13  Df = 155.3  -57.8 ps  S =  36.9 ps  Cin =  5.3 ff  Cout =   1.7 ff  Cmax =  93.4 ff  G =   29  
+ABC: Path  3 --     225 : 2    1 AND2_X2    A =   1.33  Df = 244.3  -58.4 ps  S =  23.3 ps  Cin =  1.6 ff  Cout =   2.4 ff  Cmax = 120.8 ff  G =  149  
+ABC: Path  4 --     226 : 2    3 NOR2_X1.5  A =   1.06  Df = 325.7  -53.0 ps  S =  94.1 ps  Cin =  2.3 ff  Cout =   5.5 ff  Cmax =  40.0 ff  G =  231  
+ABC: Path  5 --     505 : 2    1 AND2_X3.5  A =   2.13  Df = 447.7  -75.8 ps  S =  33.2 ps  Cin =  2.7 ff  Cout =   8.2 ff  Cmax = 211.4 ff  G =  275  
+ABC: Path  6 --     507 : 2    1 NOR2_X5    A =   2.93  Df = 469.3  -39.3 ps  S =  36.5 ps  Cin =  7.6 ff  Cout =   2.5 ff  Cmax = 133.5 ff  G =   30  
+ABC: Path  7 --     508 : 2    2 NAND2_X1.5 A =   1.06  Df = 541.2  -62.3 ps  S =  45.5 ps  Cin =  2.3 ff  Cout =   5.0 ff  Cmax =  89.0 ff  G =  211  
+ABC: Path  8 --     509 : 2    1 NOR2_X2.5  A =   1.60  Df = 569.9   -8.4 ps  S =  40.1 ps  Cin =  3.8 ff  Cout =   1.6 ff  Cmax =  66.7 ff  G =   40  
+ABC: Path  9 --     510 : 2    1 NOR2_X1    A =   0.80  Df = 692.3  -95.4 ps  S =  80.0 ps  Cin =  1.5 ff  Cout =   2.9 ff  Cmax =  26.6 ff  G =  182  
+ABC: Path 10 --     511 : 2    2 OR2_X3.5   A =   2.13  Df = 786.0  -18.7 ps  S =  28.8 ps  Cin =  2.7 ff  Cout =   6.4 ff  Cmax = 211.9 ff  G =  232  
+ABC: Path 11 --     512 : 2    1 NOR2_X3    A =   1.86  Df = 851.1  -44.5 ps  S =  38.1 ps  Cin =  4.6 ff  Cout =   1.6 ff  Cmax =  80.0 ff  G =   33  
+ABC: Path 12 --     513 : 2    1 NOR2_X1    A =   0.80  Df = 935.3  -48.4 ps  S =  87.4 ps  Cin =  1.5 ff  Cout =   3.3 ff  Cmax =  26.6 ff  G =  209  
+ABC: Path 13 --     514 : 2    2 OR2_X4     A =   2.39  Df =1050.7  -28.1 ps  S =  26.1 ps  Cin =  3.1 ff  Cout =   3.6 ff  Cmax = 242.2 ff  G =  112  
+ABC: Path 14 --     818 : 2    1 AND2_X2.5  A =   1.60  Df =1142.2  -37.6 ps  S =  30.3 ps  Cin =  2.0 ff  Cout =   4.1 ff  Cmax = 151.0 ff  G =  205  
+ABC: Path 15 --     819 : 2    1 OR2_X5     A =   2.93  Df =1322.7  -90.7 ps  S =  42.6 ps  Cin =  3.8 ff  Cout =  20.0 ff  Cmax = 302.8 ff  G =  524  
+ABC: Start-point = pi10 (\a [27]).  End-point = po18 ($ternary$circuits/barrel_shifter.v:15$15_Y [12]).
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:       82
+ABC RESULTS:         AND2_X1.5 cells:        7
+ABC RESULTS:           AND2_X2 cells:       25
+ABC RESULTS:         AND2_X2.5 cells:        4
+ABC RESULTS:           AND2_X3 cells:        1
+ABC RESULTS:         AND2_X3.5 cells:        2
+ABC RESULTS:           AND2_X4 cells:        1
+ABC RESULTS:           AND2_X5 cells:        1
+ABC RESULTS:            BUF_X1 cells:       34
+ABC RESULTS:            INV_X1 cells:       11
+ABC RESULTS:           INV_X14 cells:        1
+ABC RESULTS:           INV_X16 cells:        2
+ABC RESULTS:          NAND2_X1 cells:      245
+ABC RESULTS:        NAND2_X1.5 cells:        9
+ABC RESULTS:          NAND2_X5 cells:        1
+ABC RESULTS:           NOR2_X1 cells:      270
+ABC RESULTS:         NOR2_X1.5 cells:       29
+ABC RESULTS:           NOR2_X2 cells:       15
+ABC RESULTS:         NOR2_X2.5 cells:        7
+ABC RESULTS:           NOR2_X3 cells:        5
+ABC RESULTS:         NOR2_X3.5 cells:        4
+ABC RESULTS:           NOR2_X5 cells:        1
+ABC RESULTS:            OR2_X1 cells:       30
+ABC RESULTS:          OR2_X1.5 cells:        6
+ABC RESULTS:            OR2_X2 cells:        9
+ABC RESULTS:          OR2_X2.5 cells:        2
+ABC RESULTS:            OR2_X3 cells:        1
+ABC RESULTS:          OR2_X3.5 cells:        1
+ABC RESULTS:            OR2_X4 cells:        1
+ABC RESULTS:            OR2_X5 cells:        1
+ABC RESULTS:        internal signals:      449
+ABC RESULTS:           input signals:       39
+ABC RESULTS:          output signals:       32
+Removing temp directory.
+Removing global temp directory.
+Removed 0 unused cells and 90 unused wires.
+
+8. Executing Verilog backend.
+
+8.1. Executing BMUXMAP pass.
+
+8.2. Executing DEMUXMAP pass.
+Dumping module `\barrel_shifter'.
+
+End of script. Logfile hash: 035db95beb, time: 0.17s, user: 0.02s, system: 0.01s, MEM: 20.69 MB peak
+Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
+Time spent: 90% 1x abc (0 sec), 4% 3x read_verilog (0 sec), ...
