@@ -198,14 +198,17 @@ Mapping DFF cells in module `\crc32':
 7. Executing ABC pass (technology mapping using ABC).
 
 7.1. Extracting gate netlist of module `\crc32' to `<abc-temp-dir>/input.blif'..
-ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_d38185c9.scl (1 files)
+sh: line 1:  3600 Segmentation fault: 11  "/opt/homebrew/bin/yosys-abc" -s -f /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-abc-V8fyGZ/abc.script 2>&1
+ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_ded2da40.scl (1 files)
 
 7.1.1. Executed ABC.
 Extracted 3008 gates and 3105 wires to a netlist network with 96 inputs and 32 outputs.
 Running ABC script: <abc-temp-dir>/abc.script
 ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
 ABC: + read_blif <abc-temp-dir>/input.blif 
-ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_d38185c9.scl 
+ABC: + read_scl /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_ded2da40.scl 
+ABC: Warnings: genlib library reader cannot detect the buffer gate.
+ABC: Some parts of the supergate-based technology mapper may not work correctly.
 ABC: + read_constr -v /Users/adi/Developer/Repo/BTP-Sem7/02-09-26/constraints.sdc 
 ABC: Unrecognized token "#".
 ABC: Unrecognized token "create_clock".
@@ -227,71 +230,4 @@ ABC: + strash
 ABC: + &get -n 
 ABC: + &dch -f 
 ABC: + &nf 
-ABC: + &put 
-ABC: + buffer 
-ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
-ABC: + upsize 
-ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
-ABC: + dnsize 
-ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
-ABC: + stime -p 
-ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
-ABC: WireLoad = "none"  Gates =    585 (  0.2 %)   Cap =  6.6 ff ( 13.8 %)   Area =     1238.76 ( 63.1 %)   Delay =  4891.97 ps  ( 46.7 %)               
-ABC: Path  0 --       5 : 0    1 pi         A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =   5.4 ff  Cmax =   0.0 ff  G =    0  
-ABC: Path  1 --     140 : 2    3 XOR2_X2.5  A =   2.79  Df = 206.9   -6.6 ps  S = 132.4 ps  Cin =  5.3 ff  Cout =  11.1 ff  Cmax =  63.0 ff  G =  205  
-ABC: Path  2 --     141 : 2    7 XOR2_X3    A =   3.19  Df = 485.8  -41.4 ps  S = 165.9 ps  Cin =  6.4 ff  Cout =  18.9 ff  Cmax =  75.6 ff  G =  291  
-ABC: Path  3 --     144 : 2    2 XOR2_X2    A =   2.39  Df = 758.4 -105.3 ps  S = 149.6 ps  Cin =  4.3 ff  Cout =  10.4 ff  Cmax =  50.4 ff  G =  229  
-ABC: Path  4 --     145 : 2    4 XNOR2_X3.5 A =   4.26  Df = 955.1 -108.5 ps  S = 127.4 ps  Cin =  7.1 ff  Cout =  17.1 ff  Cmax =  90.9 ff  G =  237  
-ABC: Path  5 --     205 : 2    4 XOR2_X3    A =   3.19  Df =1170.6  -82.0 ps  S = 135.5 ps  Cin =  6.4 ff  Cout =  11.6 ff  Cmax =  75.6 ff  G =  176  
-ABC: Path  6 --     209 : 2    1 XNOR2_X2.5 A =   3.19  Df =1335.0  -60.5 ps  S = 122.5 ps  Cin =  5.2 ff  Cout =  11.5 ff  Cmax =  64.9 ff  G =  211  
-ABC: Path  7 --     210 : 2    6 XNOR2_X5   A =   5.85  Df =1501.4  -43.3 ps  S = 111.9 ps  Cin = 10.0 ff  Cout =  20.2 ff  Cmax = 129.8 ff  G =  196  
-ABC: Path  8 --     323 : 2    3 XOR2_X2    A =   2.39  Df =1718.8   -9.7 ps  S = 140.6 ps  Cin =  4.3 ff  Cout =   9.3 ff  Cmax =  50.4 ff  G =  209  
-ABC: Path  9 --     324 : 2    1 XNOR2_X2   A =   2.66  Df =1907.5  -13.0 ps  S = 113.2 ps  Cin =  4.2 ff  Cout =   8.1 ff  Cmax =  51.9 ff  G =  183  
-ABC: Path 10 --     325 : 2    6 XNOR2_X3.5 A =   4.26  Df =2115.2  -41.6 ps  S = 135.0 ps  Cin =  7.1 ff  Cout =  18.7 ff  Cmax =  90.9 ff  G =  253  
-ABC: Path 11 --     337 : 2    4 XNOR2_X2   A =   2.66  Df =2323.7  -35.0 ps  S = 141.3 ps  Cin =  4.2 ff  Cout =  11.3 ff  Cmax =  51.9 ff  G =  263  
-ABC: Path 12 --     338 : 2    1 XOR2_X2    A =   2.39  Df =2563.3   -2.9 ps  S = 156.1 ps  Cin =  4.3 ff  Cout =  11.5 ff  Cmax =  50.4 ff  G =  253  
-ABC: Path 13 --     339 : 2    5 XNOR2_X5   A =   5.85  Df =2745.8   -7.4 ps  S = 111.4 ps  Cin = 10.0 ff  Cout =  20.0 ff  Cmax = 129.8 ff  G =  195  
-ABC: Path 14 --     445 : 2    1 XOR2_X2.5  A =   2.79  Df =2995.7  -37.2 ps  S = 114.9 ps  Cin =  5.3 ff  Cout =   8.1 ff  Cmax =  63.0 ff  G =  145  
-ABC: Path 15 --     446 : 2    6 XNOR2_X3.5 A =   4.26  Df =3177.5  -12.5 ps  S = 140.9 ps  Cin =  7.1 ff  Cout =  19.8 ff  Cmax =  90.9 ff  G =  270  
-ABC: Path 16 --     561 : 2    1 XOR2_X2.5  A =   2.79  Df =3387.9   -2.6 ps  S = 110.7 ps  Cin =  5.3 ff  Cout =   7.0 ff  Cmax =  63.0 ff  G =  125  
-ABC: Path 17 --     562 : 2    4 XNOR2_X3   A =   3.72  Df =3610.3  -33.1 ps  S = 158.5 ps  Cin =  6.1 ff  Cout =  20.0 ff  Cmax =  77.9 ff  G =  319  
-ABC: Path 18 --     578 : 2    1 XOR2_X2    A =   2.39  Df =3835.5  -31.6 ps  S = 110.8 ps  Cin =  4.3 ff  Cout =   5.9 ff  Cmax =  50.4 ff  G =  130  
-ABC: Path 19 --     579 : 2    6 XNOR2_X2.5 A =   3.19  Df =4061.3  -25.5 ps  S = 188.2 ps  Cin =  5.2 ff  Cout =  20.8 ff  Cmax =  64.9 ff  G =  390  
-ABC: Path 20 --     597 : 2    4 XNOR2_X2   A =   2.66  Df =4297.6  -30.4 ps  S = 155.2 ps  Cin =  4.2 ff  Cout =  12.9 ff  Cmax =  51.9 ff  G =  293  
-ABC: Path 21 --     677 : 2    2 XNOR2_X2.5 A =   3.19  Df =4481.1  -12.8 ps  S = 106.4 ps  Cin =  5.2 ff  Cout =   9.2 ff  Cmax =  64.9 ff  G =  173  
-ABC: Path 22 --     678 : 2    1 XOR2_X1.5  A =   2.00  Df =4892.0 -158.9 ps  S = 289.2 ps  Cin =  3.3 ff  Cout =  20.0 ff  Cmax =  37.8 ff  G =  607  
-ABC: Start-point = pi4 (\crc_in [25]).  End-point = po15 ($procmux$132_Y [15]).
-ABC: + write_blif <abc-temp-dir>/output.blif 
-
-7.1.2. Re-integrating ABC results.
-ABC RESULTS:            INV_X1 cells:        1
-ABC RESULTS:          XNOR2_X1 cells:      296
-ABC RESULTS:        XNOR2_X1.5 cells:       50
-ABC RESULTS:          XNOR2_X2 cells:       38
-ABC RESULTS:        XNOR2_X2.5 cells:       30
-ABC RESULTS:          XNOR2_X3 cells:       18
-ABC RESULTS:        XNOR2_X3.5 cells:       10
-ABC RESULTS:          XNOR2_X5 cells:       19
-ABC RESULTS:           XOR2_X1 cells:       72
-ABC RESULTS:         XOR2_X1.5 cells:       16
-ABC RESULTS:           XOR2_X2 cells:       16
-ABC RESULTS:         XOR2_X2.5 cells:       14
-ABC RESULTS:           XOR2_X3 cells:        4
-ABC RESULTS:           XOR2_X5 cells:        1
-ABC RESULTS:        internal signals:     2977
-ABC RESULTS:           input signals:       96
-ABC RESULTS:          output signals:       32
-Removing temp directory.
-Removing global temp directory.
-Removed 0 unused cells and 514 unused wires.
-
-8. Executing Verilog backend.
-
-8.1. Executing BMUXMAP pass.
-
-8.2. Executing DEMUXMAP pass.
-Dumping module `\crc32'.
-
-End of script. Logfile hash: 964aa51c36, time: 0.66s, user: 0.03s, system: 0.00s, MEM: 25.77 MB peak
-Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
-Time spent: 96% 1x abc (0 sec), 1% 3x read_verilog (0 sec), ...
+ERROR: ABC: execution of script "/var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-abc-V8fyGZ/abc.script" failed: return code 139 (errno=0).

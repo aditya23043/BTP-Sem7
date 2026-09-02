@@ -290,6 +290,6 @@ Removed 0 unused cells and 514 unused wires.
 8.2. Executing DEMUXMAP pass.
 Dumping module `\crc32'.
 
-End of script. Logfile hash: 73631db24c, time: 0.67s, user: 0.05s, system: 0.01s, MEM: 37.17 MB peak
+End of script. Logfile hash: 73631db24c, time: 0.66s, user: 0.05s, system: 0.01s, MEM: 37.20 MB peak
 Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
 Time spent: 94% 1x abc (0 sec), 2% 1x dfflibmap (0 sec), ...

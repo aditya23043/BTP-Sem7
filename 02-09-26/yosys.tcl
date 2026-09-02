@@ -8,10 +8,10 @@ flatten
 
 techmap
 
-dfflibmap -liberty libs/nangate45.lib
+dfflibmap -liberty libs/nangate45_reduced.lib
 
-abc -liberty libs/nangate45.lib -constr constraints.sdc
+abc -liberty libs/nangate45_reduced.lib -constr constraints.sdc
 
 clean
 
-write_verilog -noattr output/mapped_nangate45.lib_popcount64.v
+write_verilog -noattr output/mapped_nangate45_reduced.lib_popcount64.v

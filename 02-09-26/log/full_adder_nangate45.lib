@@ -8,18 +8,18 @@
 
 -- Executing script file `yosys.tcl' --
 
-1. Executing Verilog-2005 frontend: circuits/barrel_shifter.v
-Parsing Verilog input from `circuits/barrel_shifter.v' to AST representation.
-Generating RTLIL representation for module `\barrel_shifter'.
+1. Executing Verilog-2005 frontend: circuits/full_adder.v
+Parsing Verilog input from `circuits/full_adder.v' to AST representation.
+Generating RTLIL representation for module `\full_adder'.
 Successfully finished Verilog frontend.
 
 2. Executing HIERARCHY pass (managing design hierarchy).
 
 2.1. Analyzing design hierarchy..
-Top module:  \barrel_shifter
+Top module:  \full_adder
 
 2.2. Analyzing design hierarchy..
-Top module:  \barrel_shifter
+Top module:  \full_adder
 Removed 0 unused modules.
 
 3. Executing PROC pass (convert processes to netlists).
@@ -53,7 +53,7 @@ Converted 0 switches.
 Cleaned up 0 empty switches.
 
 3.12. Executing OPT_EXPR pass (perform const folding).
-Optimizing module barrel_shifter.
+Optimizing module full_adder.
 
 4. Executing FLATTEN pass (flatten design).
 
@@ -89,9 +89,11 @@ Generating RTLIL representation for module `$input_port'.
 Successfully finished Verilog frontend.
 
 5.2. Continuing TECHMAP pass.
-Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
 No more expansions possible.
-<suppressed ~92 debug messages>
+<suppressed ~84 debug messages>
 
 6. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
   cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
@@ -124,15 +126,15 @@ No more expansions possible.
 
 6.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
 <suppressed ~8 debug messages>
-Mapping DFF cells in module `\barrel_shifter':
+Mapping DFF cells in module `\full_adder':
 
 7. Executing ABC pass (technology mapping using ABC).
 
-7.1. Extracting gate netlist of module `\barrel_shifter' to `<abc-temp-dir>/input.blif'..
+7.1. Extracting gate netlist of module `\full_adder' to `<abc-temp-dir>/input.blif'..
 ABC: using cached merged SCL: /var/folders/q3/3qvbnc853yldj0q76kvml8fc0000gn/T/yosys-liberty-scl-cache/yosys_merged_480dbedf.scl (1 files)
 
 7.1.1. Executed ABC.
-Extracted 480 gates and 520 wires to a netlist network with 39 inputs and 32 outputs.
+Extracted 7 gates and 10 wires to a netlist network with 3 inputs and 2 outputs.
 Running ABC script: <abc-temp-dir>/abc.script
 ABC: ======== ABC command line "source <abc-temp-dir>/abc.script"
 ABC: + read_blif <abc-temp-dir>/input.blif 
@@ -168,65 +170,34 @@ ABC: + dnsize
 ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
 ABC: + stime -p 
 ABC: Cannot find the default PI driving cell (-lib_cell) in the library.
-ABC: WireLoad = "none"  Gates =    299 ( 11.0 %)   Cap =  7.4 ff ( 10.8 %)   Area =      502.47 ( 72.6 %)   Delay =   469.90 ps  ( 45.8 %)               
-ABC: Path  0 --       2 : 0   50 pi       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  86.0 ff  Cmax =   0.0 ff  G =    0  
-ABC: Path  1 --     230 : 2    1 OR2_X2   A =   1.33  Df = 446.9  -67.7 ps  S =  12.2 ps  Cin =  1.6 ff  Cout =   6.8 ff  Cmax = 121.2 ff  G =  389  
-ABC: Path  2 --     236 : 4    1 AOI22_X4 A =   4.52  Df = 469.9  -37.0 ps  S =  45.0 ps  Cin =  6.2 ff  Cout =  20.0 ff  Cmax =  98.0 ff  G =  323  
-ABC: Start-point = pi1 (\right).  End-point = po2 ($ternary$circuits/barrel_shifter.v:15$15_Y [28]).
+ABC: WireLoad = "none"  Gates =      6 ( 16.7 %)   Cap = 13.1 ff ( 50.0 %)   Area =       15.16 ( 16.7 %)   Delay =   111.32 ps  ( 66.7 %)               
+ABC: Path  0 --       3 : 0    3 pi       A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  16.1 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --       7 : 3    1 OAI21_X4 A =   3.46  Df =  27.2  -13.0 ps  S =  17.7 ps  Cin =  6.1 ff  Cout =   6.2 ff  Cmax = 104.1 ff  G =   96  
+ABC: Path  2 --       8 : 2    2 NAND2_X4 A =   2.39  Df =  53.6  -10.9 ps  S =  20.5 ps  Cin =  5.9 ff  Cout =  26.5 ff  Cmax = 237.4 ff  G =  443  
+ABC: Path  3 --      11 : 4    1 OAI22_X4 A =   4.52  Df = 111.3  -14.7 ps  S =  46.6 ps  Cin =  6.2 ff  Cout =  20.0 ff  Cmax =  92.5 ff  G =  321  
+ABC: Start-point = pi2 (\B).  End-point = po1 ($xor$circuits/full_adder.v:6$2_Y).
 ABC: + write_blif <abc-temp-dir>/output.blif 
 
 7.1.2. Re-integrating ABC results.
-ABC RESULTS:           AND2_X1 cells:        2
-ABC RESULTS:           AND3_X1 cells:        1
-ABC RESULTS:           AND4_X1 cells:        3
-ABC RESULTS:         AOI211_X1 cells:        3
-ABC RESULTS:          AOI21_X1 cells:        2
-ABC RESULTS:         AOI221_X1 cells:        7
-ABC RESULTS:         AOI221_X2 cells:        1
-ABC RESULTS:         AOI222_X1 cells:       22
-ABC RESULTS:         AOI222_X2 cells:       12
-ABC RESULTS:         AOI222_X4 cells:        3
-ABC RESULTS:          AOI22_X1 cells:       18
-ABC RESULTS:          AOI22_X2 cells:       14
-ABC RESULTS:          AOI22_X4 cells:        2
-ABC RESULTS:            BUF_X1 cells:       10
-ABC RESULTS:            BUF_X2 cells:        5
-ABC RESULTS:         CLKBUF_X1 cells:       11
-ABC RESULTS:            INV_X1 cells:        7
-ABC RESULTS:           MUX2_X1 cells:       54
-ABC RESULTS:           MUX2_X2 cells:        7
-ABC RESULTS:          NAND2_X1 cells:        9
-ABC RESULTS:          NAND3_X1 cells:        9
-ABC RESULTS:          NAND4_X1 cells:        1
-ABC RESULTS:           NOR2_X1 cells:       14
-ABC RESULTS:           NOR2_X2 cells:        1
-ABC RESULTS:           NOR3_X1 cells:        4
-ABC RESULTS:           NOR4_X1 cells:        2
-ABC RESULTS:         OAI211_X1 cells:        1
-ABC RESULTS:          OAI21_X1 cells:        4
-ABC RESULTS:         OAI221_X1 cells:        3
-ABC RESULTS:         OAI222_X1 cells:       13
-ABC RESULTS:          OAI22_X1 cells:       17
-ABC RESULTS:          OAI22_X2 cells:       13
+ABC RESULTS:            INV_X1 cells:        1
+ABC RESULTS:          NAND2_X4 cells:        2
+ABC RESULTS:           NOR3_X2 cells:        1
+ABC RESULTS:          OAI21_X4 cells:        1
 ABC RESULTS:          OAI22_X4 cells:        1
-ABC RESULTS:            OR2_X1 cells:       12
-ABC RESULTS:            OR2_X2 cells:        6
-ABC RESULTS:            OR3_X1 cells:        3
-ABC RESULTS:            OR4_X1 cells:        2
-ABC RESULTS:        internal signals:      449
-ABC RESULTS:           input signals:       39
-ABC RESULTS:          output signals:       32
+ABC RESULTS:        internal signals:        5
+ABC RESULTS:           input signals:        3
+ABC RESULTS:          output signals:        2
 Removing temp directory.
 Removing global temp directory.
-Removed 0 unused cells and 90 unused wires.
+Removed 0 unused cells and 12 unused wires.
 
 8. Executing Verilog backend.
 
 8.1. Executing BMUXMAP pass.
 
 8.2. Executing DEMUXMAP pass.
-Dumping module `\barrel_shifter'.
+Dumping module `\full_adder'.
 
-End of script. Logfile hash: 3b1a33d055, time: 0.13s, user: 0.03s, system: 0.00s, MEM: 31.19 MB peak
+End of script. Logfile hash: 927fdc4498, time: 0.05s, user: 0.02s, system: 0.00s, MEM: 29.73 MB peak
 Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
-Time spent: 80% 1x abc (0 sec), 13% 1x dfflibmap (0 sec), ...
+Time spent: 57% 1x abc (0 sec), 32% 1x dfflibmap (0 sec), ...

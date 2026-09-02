@@ -389,6 +389,6 @@ Removed 0 unused cells and 12694 unused wires.
 Dumping module `\fir16'.
 
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: 7d594baf3c, time: 3.59s, user: 0.66s, system: 0.06s, MEM: 206.62 MB peak
+End of script. Logfile hash: 7d594baf3c, time: 3.85s, user: 0.71s, system: 0.06s, MEM: 197.11 MB peak
 Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
-Time spent: 89% 1x abc (3 sec), 4% 1x techmap (0 sec), ...
+Time spent: 90% 1x abc (3 sec), 4% 1x techmap (0 sec), ...

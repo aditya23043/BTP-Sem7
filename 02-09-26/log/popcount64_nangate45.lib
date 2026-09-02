@@ -307,6 +307,6 @@ Removed 0 unused cells and 3786 unused wires.
 Dumping module `\popcount64'.
 
 Warnings: 1 unique messages, 1 total
-End of script. Logfile hash: deddae11a2, time: 0.26s, user: 0.07s, system: 0.01s, MEM: 51.31 MB peak
+End of script. Logfile hash: deddae11a2, time: 0.27s, user: 0.08s, system: 0.01s, MEM: 50.91 MB peak
 Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
-Time spent: 76% 1x abc (0 sec), 9% 1x techmap (0 sec), ...
+Time spent: 76% 1x abc (0 sec), 10% 1x techmap (0 sec), ...

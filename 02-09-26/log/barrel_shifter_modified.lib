@@ -227,6 +227,6 @@ Removed 0 unused cells and 90 unused wires.
 8.2. Executing DEMUXMAP pass.
 Dumping module `\barrel_shifter'.
 
-End of script. Logfile hash: 035db95beb, time: 0.17s, user: 0.02s, system: 0.01s, MEM: 20.69 MB peak
+End of script. Logfile hash: 035db95beb, time: 0.18s, user: 0.02s, system: 0.01s, MEM: 20.91 MB peak
 Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
 Time spent: 90% 1x abc (0 sec), 4% 3x read_verilog (0 sec), ...

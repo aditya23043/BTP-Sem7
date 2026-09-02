@@ -309,6 +309,6 @@ Removed 0 unused cells and 1083 unused wires.
 8.2. Executing DEMUXMAP pass.
 Dumping module `\alu32'.
 
-End of script. Logfile hash: f1d0665efb, time: 0.24s, user: 0.06s, system: 0.00s, MEM: 28.98 MB peak
+End of script. Logfile hash: f1d0665efb, time: 0.25s, user: 0.06s, system: 0.01s, MEM: 28.33 MB peak
 Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
 Time spent: 80% 1x abc (0 sec), 9% 1x techmap (0 sec), ...

@@ -328,6 +328,6 @@ Removed 0 unused cells and 298 unused wires.
 Dumping module `\lzc32'.
 
 Warnings: 2 unique messages, 33 total
-End of script. Logfile hash: 0a9d56d66c, time: 0.08s, user: 0.01s, system: 0.00s, MEM: 19.44 MB peak
+End of script. Logfile hash: 0a9d56d66c, time: 0.08s, user: 0.01s, system: 0.00s, MEM: 19.56 MB peak
 Yosys 0.68+post (git sha1 c12172fbae8af5e20f6fb52e3d4e92d56ed587b6, Release, AppleClang clang++ 21.0.0.21000101)
-Time spent: 86% 1x abc (0 sec), 7% 3x read_verilog (0 sec), ...
+Time spent: 87% 1x abc (0 sec), 7% 3x read_verilog (0 sec), ...
