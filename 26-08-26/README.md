@@ -533,3 +533,12 @@ ERROR: Can't open ABC output file `/tmp/yosys-abc-fvpLl3/output.blif'.
 - Removed all other NAND2 gates so then the tool used NAND3
 - Removed all NAND gates altogether and now it does not use NAND anymore;
   moved to other gates to achieve the logic
+
+# Sun Aug 30 23:39:25 IST 2026
+
+Tried to put timing constraint using `-D 1`
+but still seeing drive strengths of x1 for all cells
+
+# Mon Aug 31 09:21:31 IST 2026
+
+Sorted

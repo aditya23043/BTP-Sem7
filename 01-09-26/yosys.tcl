@@ -1,7 +1,6 @@
-read_verilog full_adder.v
-read_verilog rca.v
+read_verilog circuits/full_adder.v
 
-hierarchy -check -top rca
+hierarchy -check -top full_adder
 
 proc
 
@@ -15,4 +14,6 @@ abc -liberty nangate45_slow_arnav.lib -constr constraints.sdc
 
 clean
 
-write_verilog -noattr rca_mapped.v
+write_verilog -noattr fa_mapped.v
+stat -liberty nangate45_slow_arnav
+ltp
