@@ -1,0 +1,14 @@
+look at yosys source code
+
+try to optimize
+
+logic synthesis
+
+where is the tool fetching timing from the library
+add a layer
+
+harvesting the ppa
+
+hashmap
+	key = ROBDD (not just a standard cell)
+	store the params for 
