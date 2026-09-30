@@ -1,0 +1,8 @@
+# Benchmark "netlist" written by ABC on Mon Sep 28 09:44:17 2026
+.model netlist
+.inputs ys__n3 ys__n4 ys__n7
+.outputs ys__n2
+.gate NAND2_X1  A1=ys__n3 A2=ys__n7 ZN=new_n5
+.gate OAI21_X1  A=ys__n4 B1=ys__n7 B2=ys__n3 ZN=new_n6
+.gate NAND2_X1  A1=new_n5 A2=new_n6 ZN=ys__n2
+.end

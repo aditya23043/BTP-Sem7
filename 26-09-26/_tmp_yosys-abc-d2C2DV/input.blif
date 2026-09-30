@@ -1,0 +1,24 @@
+.model netlist
+.inputs ys__n3 ys__n4 ys__n7
+.outputs ys__n2
+# ys__n0     $or$test.v:6$3_Y
+# ys__n1     $and$test.v:6$4_Y
+# ys__n2     \y
+# ys__n3     \c
+# ys__n4     \a
+# ys__n5     $and$test.v:6$1_Y
+# ys__n6     $and$test.v:6$2_Y
+# ys__n7     \b
+.names ys__n5 ys__n6 ys__n0
+-1 1
+1- 1
+.names ys__n3 ys__n4 ys__n1
+11 1
+.names ys__n0 ys__n1 ys__n2
+-1 1
+1- 1
+.names ys__n4 ys__n7 ys__n5
+11 1
+.names ys__n7 ys__n3 ys__n6
+11 1
+.end

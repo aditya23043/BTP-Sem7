@@ -1,0 +1,3 @@
+source -s abc.rc
+read_blif test.blif
+read_scl NangateOpenCellLibrary_typical.lib 
