@@ -1,7 +1,8 @@
-read_verilog test.v
-hierarchy -top test
+read_verilog test6.v
+hierarchy -top test6
 
 proc
+flatten
 opt
 techmap
 opt

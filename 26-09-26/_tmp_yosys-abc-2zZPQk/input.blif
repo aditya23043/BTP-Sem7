@@ -1,0 +1,16 @@
+.model netlist
+.inputs ys__n0 ys__n1 ys__n3
+.outputs ys__n7
+.names ys__n0 ys__n1 ys__n2
+11 1
+.names ys__n1 ys__n3 ys__n4
+11 1
+.names ys__n2 ys__n4 ys__n5
+-1 1
+1- 1
+.names ys__n3 ys__n0 ys__n6
+11 1
+.names ys__n5 ys__n6 ys__n7
+-1 1
+1- 1
+.end

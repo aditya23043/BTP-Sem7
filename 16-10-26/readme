@@ -1,0 +1,106 @@
+actually changing the source code now to include caching at the yosys level
+
+Mon Oct 19 11:45:08 IST 2026
+    implemented the cache
+
+now need to do analysis
+
+lets run 10 runs for each type (baseline, cache+hit, cache+miss)
+
+function = ab + bc + ca
+
+--- BASELINE (Yosys 0.70+157) ---
+
+190ms
+Time spent: 60% 1x abc (0 sec), 28% 3x read_verilog (0 sec), ...
+
+180ms
+Time spent: 61% 1x abc (0 sec), 27% 3x read_verilog (0 sec), ...
+
+130ms
+Time spent: 61% 1x abc (0 sec), 28% 3x read_verilog (0 sec), ...
+
+110ms
+Time spent: 61% 1x abc (0 sec), 28% 3x read_verilog (0 sec), ...
+
+110ms
+Time spent: 60% 1x abc (0 sec), 29% 3x read_verilog (0 sec), ...
+
+180ms
+Time spent: 60% 1x abc (0 sec), 28% 3x read_verilog (0 sec), ...
+
+110ms
+Time spent: 60% 1x abc (0 sec), 29% 3x read_verilog (0 sec), ...
+
+120ms
+Time spent: 61% 1x abc (0 sec), 28% 3x read_verilog (0 sec), ...
+
+110ms
+Time spent: 61% 1x abc (0 sec), 28% 3x read_verilog (0 sec), ...
+
+180ms
+Time spent: 60% 1x abc (0 sec), 28% 3x read_verilog (0 sec), ...
+
+--- Cache + Hit ---
+
+110ms
+Time spent: 56% 3x read_verilog (0 sec), 19% 1x abc (0 sec), ...
+
+60ms
+Time spent: 61% 3x read_verilog (0 sec), 17% 1x abc (0 sec), ...
+
+60ms
+Time spent: 61% 3x read_verilog (0 sec), 17% 1x abc (0 sec), ...
+
+70ms
+Time spent: 61% 3x read_verilog (0 sec), 17% 1x abc (0 sec), ...
+
+120ms
+Time spent: 57% 3x read_verilog (0 sec), 19% 1x abc (0 sec), ...
+
+50ms
+Time spent: 59% 3x read_verilog (0 sec), 19% 1x abc (0 sec), ...
+
+70ms
+Time spent: 61% 3x read_verilog (0 sec), 16% 1x abc (0 sec), ...
+
+70ms
+Time spent: 61% 3x read_verilog (0 sec), 17% 1x abc (0 sec), ...
+
+100ms
+Time spent: 58% 3x read_verilog (0 sec), 17% 1x abc (0 sec), ...
+
+110ms
+Time spent: 59% 3x read_verilog (0 sec), 17% 1x abc (0 sec), ...
+
+--- Cache + Miss ---
+
+210ms
+Time spent: 64% 1x abc (0 sec), 25% 3x read_verilog (0 sec), ...
+
+210ms
+Time spent: 63% 1x abc (0 sec), 26% 3x read_verilog (0 sec), ...
+
+130ms
+Time spent: 63% 1x abc (0 sec), 27% 3x read_verilog (0 sec), ...
+
+200ms
+Time spent: 63% 1x abc (0 sec), 25% 3x read_verilog (0 sec), ...
+
+120ms
+Time spent: 63% 1x abc (0 sec), 27% 3x read_verilog (0 sec), ...
+
+120ms
+Time spent: 63% 1x abc (0 sec), 26% 3x read_verilog (0 sec), ...
+
+130ms
+Time spent: 63% 1x abc (0 sec), 26% 3x read_verilog (0 sec), ...
+
+130ms
+Time spent: 63% 1x abc (0 sec), 27% 3x read_verilog (0 sec), ...
+
+120ms
+Time spent: 64% 1x abc (0 sec), 26% 3x read_verilog (0 sec), ...
+
+200ms
+Time spent: 63% 1x abc (0 sec), 26% 3x read_verilog (0 sec), ...
